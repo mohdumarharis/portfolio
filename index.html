@@ -3,42 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Umar Haris — Machine Learning Engineer</title>
-  <meta name="description" content="Machine Learning Engineer specializing in production ML systems, NLP pipelines, and enterprise automation. 4+ years building data-driven systems across insurance, logistics, and pharmaceuticals." />
-  <meta name="keywords" content="Machine Learning Engineer, MLOps, NLP, Python, Azure, Data Science, Predictive Modelling" />
-  <meta property="og:title" content="Mohammad Umar Haris — Machine Learning Engineer" />
-  <meta property="og:description" content="Building production-ready ML systems for enterprise automation." />
+  <title>Mohammad Umar Haris — Data Scientist & ML Engineer</title>
+  <meta name="description" content="Data Scientist with 4+ years building statistical models, ML pipelines, and cloud-based analytics across insurance, logistics, and pharmaceutical domains. MSc Data Science (Distinction), University of Essex." />
+  <meta name="keywords" content="Data Scientist, Machine Learning Engineer, Python, SQL, Azure Databricks, Power BI, NLP, Forecasting" />
+  <meta property="og:title" content="Mohammad Umar Haris — Data Scientist & ML Engineer" />
+  <meta property="og:description" content="Turning data into decisions — predictive models, ETL pipelines, and analytics that move business metrics." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts: Syne (display) + DM Sans (body) — distinctive, not overused -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── DESIGN TOKENS ─────────────────────────────────────────── */
     :root {
-      --bg:          #f5f4f2;
-      --bg-card:     #ededea;
-      --bg-dark:     #111110;
-      --text:        #111110;
-      --text-muted:  #6b6b67;
-      --text-faint:  #9b9b96;
-      --accent:      #4a5568;        /* cool slate */
-      --accent-soft: #64748b;
-      --accent-line: #cbd5e1;
-      --border:      #ddddd8;
-      --white:       #ffffff;
-      --max-w:       1280px;
-      --radius:      4px;
-      --mono:        'SF Mono', 'Fira Code', monospace;
+      --bg:         #0a0e14;
+      --bg-elev:    #10151d;
+      --bg-card:    #131924;
+      --border:     #212938;
+      --border-soft:#1a2130;
+      --text:       #e7ebf2;
+      --text-muted: #8b93a5;
+      --text-faint: #545e70;
+      --accent:     #5eead4;
+      --accent-2:   #818cf8;
+      --accent-dim: rgba(94, 234, 212, 0.12);
+      --amber:      #fbbf24;
+      --max-w:      1240px;
+      --radius:     6px;
+      --mono:       'JetBrains Mono', monospace;
+      --display:    'Space Grotesk', sans-serif;
+      --body:       'Inter', sans-serif;
     }
 
-    /* ─── RESET ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: var(--body);
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -48,1030 +48,410 @@
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ::selection { background: var(--accent); color: #06231f; }
 
-    /* ─── SCROLL REVEAL ─────────────────────────────────────────── */
+    /* ─── SCROLL REVEAL ─────────────────────────────────────── */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
 
-    /* ─── NAV ───────────────────────────────────────────────────── */
+    /* ─── NAV ────────────────────────────────────────────────── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 0 40px;
-      height: 64px;
+      height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(245, 244, 242, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(10, 14, 20, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s, background 0.3s;
     }
-    nav.scrolled { border-bottom-color: var(--border); }
+    nav.scrolled { border-bottom-color: var(--border); background: rgba(10, 14, 20, 0.92); }
 
     .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: -0.02em;
+      font-family: var(--mono);
+      font-weight: 500;
+      font-size: 14px;
       color: var(--text);
-    }
-    .nav-logo span { color: var(--accent-soft); }
-
-    .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
-      list-style: none;
+      gap: 8px;
     }
+    .nav-logo .dot { color: var(--accent); }
+
+    .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
     .nav-links a {
-      font-size: 13.5px;
-      font-weight: 400;
+      font-family: var(--mono);
+      font-size: 12.5px;
       color: var(--text-muted);
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
       transition: color 0.2s;
     }
+    .nav-links a::before { content: '· '; color: var(--accent); opacity: 0; transition: opacity 0.2s; }
     .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::before { opacity: 1; }
 
     .nav-cta {
-      font-size: 13px;
-      font-weight: 500;
-      padding: 8px 18px;
-      background: var(--text);
-      color: var(--bg);
+      font-family: var(--mono) !important;
+      font-size: 12px !important;
+      padding: 8px 16px;
+      border: 1px solid var(--accent);
+      color: var(--accent) !important;
       border-radius: var(--radius);
-      transition: opacity 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
-    .nav-cta:hover { opacity: 0.82; color: var(--bg); }
+    .nav-cta:hover { background: var(--accent); color: var(--bg) !important; }
 
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px; height: 1.5px;
-      background: var(--text);
-      transition: 0.3s;
-    }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text); transition: 0.3s; }
 
-    /* ─── LAYOUT HELPERS ─────────────────────────────────────────── */
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 48px;
-    }
+    /* ─── LAYOUT ─────────────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
     section { padding: 120px 0; }
 
     .section-label {
       font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 56px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
     }
-    .section-label::after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 48px;
-      background: var(--border);
+    .section-label .idx { color: var(--text-faint); }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 56px;
     }
 
-    /* ─── HERO ──────────────────────────────────────────────────── */
+    /* ─── HERO ───────────────────────────────────────────────── */
     #hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 64px;
+      padding-top: 68px;
       position: relative;
       overflow: hidden;
     }
-
-    .hero-grid-bg {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 64px 64px;
-      opacity: 0.45;
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 15% 20%, rgba(94,234,212,0.10), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 70%, rgba(129,140,248,0.10), transparent 60%);
       pointer-events: none;
     }
-    .hero-grid-bg::after {
+    .hero-bg::after {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 70% at 50% 60%, transparent 30%, var(--bg) 100%);
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border-soft) 1px, transparent 1px), linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: 0.4;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 90%);
     }
 
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      padding: 80px 0 100px;
-    }
+    .hero-inner { position: relative; z-index: 2; padding: 64px 0 90px; }
 
-    .hero-eyebrow {
+    .terminal-line {
       font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      font-size: 13px;
       color: var(--text-faint);
       margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+    .terminal-line .prompt { color: var(--accent); }
+    .terminal-line .status-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: blink 1.8s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
 
     .hero-name {
-      font-family: 'Cormorant', serif;
-      font-size: clamp(42px, 10vw, 108px);
-      font-weight: 300;
-      line-height: 0.96;
-      letter-spacing: 0.01em;
+      font-family: var(--display);
+      font-size: clamp(40px, 8.2vw, 92px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
       color: var(--text);
-      margin-bottom: 20px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      max-width: 100%;
+      margin-bottom: 22px;
+    }
+    .hero-name .highlight {
+      background: linear-gradient(100deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(18px, 2.4vw, 30px);
-      font-weight: 500;
-      color: var(--accent-soft);
-      letter-spacing: -0.02em;
+      font-family: var(--mono);
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: var(--text-muted);
       margin-bottom: 32px;
+      letter-spacing: 0.01em;
     }
+    .hero-title span { color: var(--text); }
 
     .hero-desc {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 300;
       color: var(--text-muted);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 52px;
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 48px;
     }
 
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 72px; }
 
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: var(--text);
-      color: var(--bg);
-      font-size: 14px;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 26px;
+      background: var(--accent);
+      color: #06231f;
+      font-family: var(--mono);
+      font-size: 13.5px;
       font-weight: 500;
       border-radius: var(--radius);
-      letter-spacing: 0.01em;
       transition: opacity 0.2s, transform 0.2s;
     }
-    .btn-primary:hover { opacity: 0.83; transform: translateY(-1px); color: var(--bg); }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); color: #06231f; }
 
     .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-flex; align-items: center; gap: 8px;
       padding: 13px 24px;
       border: 1px solid var(--border);
       color: var(--text-muted);
-      font-size: 14px;
-      font-weight: 400;
+      font-family: var(--mono);
+      font-size: 13.5px;
       border-radius: var(--radius);
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
     }
-    .btn-secondary:hover {
-      border-color: var(--accent-soft);
-      color: var(--text);
-      transform: translateY(-1px);
-    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
 
-    .hero-stats {
-      margin-top: 80px;
-      display: flex;
-      gap: 0;
-      border-top: 1px solid var(--border);
-      padding-top: 40px;
-    }
-    .hero-stat {
-      flex: 1;
-      padding-right: 40px;
-      border-right: 1px solid var(--border);
-      margin-right: 40px;
-    }
-    .hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); padding-top: 36px; gap: 32px; }
+    .stat-number { font-family: var(--display); font-size: 30px; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 8px; }
+    .stat-number .u { color: var(--accent); }
+    .stat-label { font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); line-height: 1.5; }
 
-    .stat-number {
-      font-family: 'Syne', sans-serif;
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      color: var(--text);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-label {
-      font-size: 12.5px;
-      color: var(--text-faint);
-      font-weight: 400;
-    }
+    /* ─── ABOUT ──────────────────────────────────────────────── */
+    #about { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 72px; align-items: start; }
+    .about-text p { font-size: 16px; font-weight: 300; color: var(--text-muted); line-height: 1.8; margin-bottom: 18px; }
+    .about-text .lead { color: var(--text); font-weight: 400; font-size: 18px; }
 
-    /* ─── POSITIONING ───────────────────────────────────────────── */
-    #positioning {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
+    .about-facts { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .fact-row { display: grid; grid-template-columns: 130px 1fr; padding: 18px 22px; border-bottom: 1px solid var(--border); background: var(--bg-card); }
+    .fact-row:last-child { border-bottom: none; }
+    .fact-key { font-family: var(--mono); font-size: 11.5px; color: var(--accent); letter-spacing: 0.04em; }
+    .fact-val { font-size: 13.5px; color: var(--text-muted); }
 
-    .positioning-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .positioning-left h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(30px, 3.5vw, 46px);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      color: var(--text);
-    }
-
-    .positioning-left p {
-      font-size: 16px;
-      font-weight: 300;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 16px;
-    }
-
-    .positioning-right {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .positioning-item {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .positioning-item:first-child { padding-top: 0; }
-    .positioning-item:last-child { border-bottom: none; }
-
-    .positioning-item-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      color: var(--text-faint);
-      margin-bottom: 10px;
-    }
-
-    .positioning-item h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .positioning-item p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.65;
-      font-weight: 300;
-    }
-
-    /* ─── PROJECTS ──────────────────────────────────────────────── */
-    #projects { background: var(--bg); }
-
-    .projects-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 64px;
-    }
-
-    .projects-header h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.05;
-      max-width: 420px;
-    }
-
-    .projects-header p {
-      font-size: 14px;
-      color: var(--text-faint);
-      max-width: 260px;
-      text-align: right;
-      font-weight: 300;
-      line-height: 1.6;
-    }
-
-    .project-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 24px;
-      overflow: hidden;
-      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
-    }
-    .project-card:hover {
-      border-color: var(--accent-line);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.07);
-      transform: translateY(-2px);
-    }
-
-    .project-card-header {
-      padding: 40px 48px 32px;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: start;
-    }
-
-    .project-tag {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-      background: rgba(74, 85, 104, 0.08);
-      padding: 4px 10px;
-      border-radius: 2px;
-      margin-bottom: 16px;
-    }
-
-    .project-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(20px, 2.5vw, 28px);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--text);
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    .project-problem {
-      font-size: 15px;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.65;
-      max-width: 560px;
-    }
-
-    .project-status {
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      color: var(--text-faint);
-      border: 1px solid var(--border);
-      padding: 5px 12px;
-      border-radius: 20px;
-    }
-    .status-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #f59e0b;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .project-card-body {
-      padding: 36px 48px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-    }
-
-    .project-section-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 16px;
-    }
-
-    .arch-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .arch-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .arch-step:last-child { border-bottom: none; }
-
-    .arch-step-num {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--text-faint);
-      padding-top: 2px;
-      flex-shrink: 0;
-      width: 20px;
-    }
-
-    .arch-step-content h4 {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 2px;
-    }
-    .arch-step-content p {
-      font-size: 12.5px;
-      color: var(--text-faint);
-      font-weight: 300;
-      line-height: 1.5;
-    }
-
-    .stack-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .stack-tag {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-muted);
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 2px;
-    }
-
-    .project-card-footer {
-      padding: 20px 48px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--bg);
-    }
-
-    .project-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .project-link {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 400;
-      transition: color 0.2s;
-    }
-    .project-link:hover { color: var(--text); }
-    .project-link svg { flex-shrink: 0; }
-
-    .roadmap-note {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--text-faint);
-      letter-spacing: 0.04em;
-    }
-
-    /* ─── SKILLS ────────────────────────────────────────────────── */
-    #skills {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .skills-header {
-      margin-bottom: 64px;
-    }
-    .skills-header h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(30px, 3.5vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .skill-group {
-      background: var(--white);
-      padding: 36px;
-    }
-
-    .skill-group-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-      margin-bottom: 20px;
-    }
-
-    .skill-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .skill-list li {
-      font-size: 14px;
-      color: var(--text);
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .skill-list li::before {
-      content: '';
-      display: block;
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--accent-line);
-      flex-shrink: 0;
-    }
-
-    /* ─── EXPERIENCE ────────────────────────────────────────────── */
+    /* ─── EXPERIENCE ─────────────────────────────────────────── */
     #experience { background: var(--bg); }
-
-    .experience-header h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(30px, 3.5vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      margin-bottom: 64px;
-    }
-
-    .exp-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
+    .exp-timeline { display: flex; flex-direction: column; }
     .exp-item {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 48px;
-      padding: 44px 0;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      padding: 40px 0;
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
     .exp-item:first-child { padding-top: 0; }
     .exp-item:last-child { border-bottom: none; }
 
     .exp-meta { padding-top: 4px; }
+    .exp-period { font-family: var(--mono); font-size: 11.5px; color: var(--accent); margin-bottom: 10px; }
+    .exp-company { font-family: var(--display); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .exp-location { font-size: 12.5px; color: var(--text-faint); font-weight: 300; }
 
-    .exp-period {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-faint);
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
+    .exp-role { font-family: var(--display); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); margin-bottom: 18px; }
 
-    .exp-company {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .exp-bullets li { font-size: 14.5px; color: var(--text-muted); font-weight: 300; line-height: 1.65; padding-left: 20px; position: relative; }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 12px; top: 3px; }
+    .exp-highlight { color: var(--text); font-weight: 500; }
 
-    .exp-location {
-      font-size: 12.5px;
-      color: var(--text-faint);
-      font-weight: 300;
-    }
+    /* ─── PROJECTS ───────────────────────────────────────────── */
+    #projects { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-    .exp-content {}
-
-    .exp-role {
-      font-family: 'Syne', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 20px;
-    }
-
-    .exp-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .exp-bullets li {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.65;
-      padding-left: 16px;
-      position: relative;
-    }
-    .exp-bullets li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--accent-soft);
-      font-size: 12px;
-      top: 2px;
-    }
-
-    .exp-highlight {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* ─── EDUCATION ─────────────────────────────────────────────── */
-    #education {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 80px 0;
-    }
-
-    .edu-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .edu-card {
-      padding: 36px;
+    .project-card {
+      background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--bg);
+      border-radius: 8px;
+      margin-bottom: 22px;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s, box-shadow .25s;
     }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
 
-    .edu-degree {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-    .edu-school { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
-    .edu-year {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-faint);
-      letter-spacing: 0.06em;
-    }
-    .edu-distinction {
-      display: inline-block;
-      margin-top: 14px;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-      background: rgba(74, 85, 104, 0.08);
-      padding: 4px 10px;
-      border-radius: 2px;
-    }
-
-    .cert-list {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .cert-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 13.5px;
-      color: var(--text-muted);
-    }
-    .cert-item::before {
-      content: '✓';
-      font-size: 12px;
-      color: var(--accent-soft);
-      font-weight: 600;
-    }
-
-    /* ─── ROADMAP ───────────────────────────────────────────────── */
-    #roadmap {
-      background: var(--bg-dark);
-      color: var(--white);
-      padding: 100px 0;
-    }
-
-    .roadmap-inner {
+    .project-card-header {
+      padding: 34px 40px 26px;
+      border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .roadmap-left h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(28px, 3.5vw, 44px);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      color: var(--white);
-    }
-    .roadmap-left p {
-      font-size: 16px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.7;
-    }
-
-    .roadmap-items {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .roadmap-item {
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    .roadmap-item:last-child { border-bottom: none; }
-
-    .roadmap-icon {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--mono);
-      font-size: 10px;
-      color: rgba(255,255,255,0.4);
-      flex-shrink: 0;
-    }
-
-    .roadmap-item h4 {
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 3px;
-    }
-    .roadmap-item p {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.35);
-      font-weight: 300;
-    }
-
-    /* ─── CONTACT ───────────────────────────────────────────────── */
-    #contact { background: var(--bg); padding: 120px 0; }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
       align-items: start;
     }
+    .project-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+    .project-title { font-family: var(--display); font-size: clamp(19px, 2.2vw, 25px); font-weight: 600; color: var(--text); margin-bottom: 10px; }
+    .project-problem { font-size: 14.5px; color: var(--text-muted); font-weight: 300; line-height: 1.65; max-width: 580px; }
 
-    .contact-left h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(30px, 3.5vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      margin-bottom: 20px;
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: 10.5px; color: var(--text-faint);
+      border: 1px solid var(--border); padding: 5px 12px; border-radius: 20px;
+      white-space: nowrap;
     }
-    .contact-left p {
-      font-size: 15px;
-      color: var(--text-muted);
-      font-weight: 300;
-      line-height: 1.7;
-      margin-bottom: 36px;
-    }
+    .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: blink 2s infinite; }
 
-    .contact-info-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .project-card-body { padding: 30px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .project-section-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--text-faint); margin-bottom: 14px; }
+
+    .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .stack-tag { font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg-elev); border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; }
+
+    .metric-list { display: flex; flex-direction: column; gap: 10px; }
+    .metric-item { display: flex; align-items: baseline; gap: 10px; font-size: 13.5px; color: var(--text-muted); }
+    .metric-item .m-num { font-family: var(--mono); color: var(--accent); font-weight: 500; min-width: 46px; }
+
+    .project-card-footer {
+      padding: 18px 40px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg-elev);
     }
-    .contact-info-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--text-muted);
+    .project-link { font-family: var(--mono); font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .project-link:hover { color: var(--accent); }
+    .roadmap-note { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); }
+
+    /* ─── SKILLS ─────────────────────────────────────────────── */
+    #skills { background: var(--bg); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .skill-group { background: var(--bg-card); padding: 32px; }
+    .skill-group-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 18px; }
+    .skill-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-list li { font-family: var(--mono); font-size: 12px; color: var(--text-muted); background: var(--bg-elev); border: 1px solid var(--border-soft); padding: 5px 10px; border-radius: 3px; }
+
+    /* ─── EDUCATION ──────────────────────────────────────────── */
+    #education { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .edu-card { padding: 32px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); }
+    .edu-degree { font-family: var(--display); font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
+    .edu-school { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
+    .edu-year { font-family: var(--mono); font-size: 11px; color: var(--text-faint); }
+    .edu-distinction {
+      display: inline-block; margin-top: 16px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+      color: var(--accent); background: var(--accent-dim); padding: 4px 10px; border-radius: 3px;
     }
-    .contact-info-item svg { color: var(--text-faint); flex-shrink: 0; }
+    .cert-list { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
+    .cert-item { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--text-muted); }
+    .cert-item::before { content: '✓'; font-size: 12px; color: var(--accent); font-weight: 600; }
+
+    /* ─── CONTACT ────────────────────────────────────────────── */
+    #contact { background: var(--bg); padding: 120px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .contact-left p { font-size: 15px; color: var(--text-muted); font-weight: 300; line-height: 1.75; margin-bottom: 36px; max-width: 480px; }
+
+    .contact-info-list { display: flex; flex-direction: column; gap: 16px; }
+    .contact-info-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-muted); font-family: var(--mono); }
+    .contact-info-item svg { color: var(--accent); flex-shrink: 0; }
     .contact-info-item a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .form-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-    }
-
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--text-faint); }
     .form-input, .form-textarea {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      color: var(--text);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 12px 16px;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
+      font-family: var(--body); font-size: 14px; color: var(--text);
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 12px 16px; outline: none; transition: border-color 0.2s; width: 100%;
     }
-    .form-input:focus, .form-textarea:focus { border-color: var(--accent-soft); }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
     .form-textarea { resize: vertical; min-height: 120px; }
 
     .form-submit {
-      padding: 14px 24px;
-      background: var(--text);
-      color: var(--bg);
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: var(--radius);
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
-      border: none;
-      font-family: 'DM Sans', sans-serif;
+      padding: 14px 24px; background: var(--accent); color: #06231f;
+      font-family: var(--mono); font-size: 13.5px; font-weight: 500;
+      border-radius: var(--radius); cursor: pointer; transition: opacity 0.2s, transform 0.2s;
       align-self: flex-start;
     }
-    .form-submit:hover { opacity: 0.82; transform: translateY(-1px); }
+    .form-submit:hover { opacity: 0.85; transform: translateY(-1px); }
 
-    .form-success {
-      display: none;
-      padding: 14px 16px;
-      background: rgba(74, 85, 104, 0.08);
-      border: 1px solid var(--accent-line);
-      border-radius: var(--radius);
-      font-size: 14px;
-      color: var(--text-muted);
-    }
+    .form-success { display: none; padding: 14px 16px; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: var(--radius); font-size: 13.5px; color: var(--text); }
 
-    /* ─── FOOTER ────────────────────────────────────────────────── */
-    footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.4);
-      padding: 36px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer { background: var(--bg-elev); border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--mono); font-size: 13px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 26px; list-style: none; }
+    .footer-links a { font-family: var(--mono); font-size: 12px; color: var(--text-faint); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text-faint); }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: rgba(255,255,255,0.7);
-      letter-spacing: -0.02em;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.35);
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: rgba(255,255,255,0.75); }
-
-    .footer-copy { font-size: 12px; }
-
-    /* ─── MOBILE NAV ────────────────────────────────────────────── */
+    /* ─── MOBILE NAV ─────────────────────────────────────────── */
     .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 64px; left: 0; right: 0;
-      background: rgba(245, 244, 242, 0.97);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      padding: 24px 24px 32px;
-      z-index: 99;
-      flex-direction: column;
-      gap: 20px;
+      display: none; position: fixed; top: 68px; left: 0; right: 0;
+      background: rgba(10,14,20,0.98); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border); padding: 24px 24px 32px;
+      z-index: 99; flex-direction: column; gap: 20px;
     }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-size: 16px;
-      color: var(--text-muted);
-      font-weight: 400;
-    }
+    .mobile-menu a { font-family: var(--mono); font-size: 15px; color: var(--text-muted); }
 
-    /* ─── RESPONSIVE ────────────────────────────────────────────── */
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 960px) {
       .container { padding: 0 24px; }
       nav { padding: 0 24px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-
       section { padding: 80px 0; }
 
-      .positioning-grid,
-      .skills-grid,
-      .contact-grid,
-      .roadmap-inner { grid-template-columns: 1fr; gap: 48px; }
-
+      .about-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 40px; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
-
-      .projects-header { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .projects-header p { text-align: left; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
 
       .project-card-header { grid-template-columns: 1fr; }
-      .project-status { text-align: left; }
-      .project-card-body { grid-template-columns: 1fr; gap: 32px; }
-      .project-card-header,
-      .project-card-body { padding: 28px 24px; }
-      .project-card-footer { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
+      .project-card-body { grid-template-columns: 1fr; gap: 28px; }
+      .project-card-header, .project-card-body { padding: 26px 24px; }
+      .project-card-footer { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 10px; }
 
-      .exp-item { grid-template-columns: 1fr; gap: 16px; }
-      .hero-stats { flex-direction: column; gap: 24px; }
-      .hero-stat { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; margin-right: 0; padding-bottom: 24px; }
-      .hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
-
-      .edu-grid { grid-template-columns: 1fr; }
-
-      /* prevent any horizontal overflow */
+      .exp-item { grid-template-columns: 1fr; gap: 14px; }
       body { overflow-x: hidden; }
-      .hero-inner { padding: 60px 0 80px; }
     }
-
     @media (max-width: 640px) {
       .skills-grid { grid-template-columns: 1fr; }
-      .hero-name { font-size: 13vw; letter-spacing: 0; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -1079,11 +459,12 @@
 
 <!-- ─── NAV ─────────────────────────────────────────────────────── -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">M. Umar Haris<span>.</span></a>
+  <a href="#" class="nav-logo">umar<span class="dot">.</span>haris</a>
   <ul class="nav-links">
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
   <div class="nav-hamburger" aria-label="Toggle menu" role="button" tabindex="0">
@@ -1092,182 +473,211 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#projects" onclick="toggleMenu()">Work</a>
-  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 
-<!-- ─── HERO ─────────────────────────────────────────────────────── -->
+<!-- ─── HERO ────────────────────────────────────────────────────── -->
 <section id="hero">
-  <div class="hero-grid-bg"></div>
+  <div class="hero-bg"></div>
   <div class="container">
     <div class="hero-inner">
-      <div class="hero-eyebrow reveal">Available for ML Engineering roles · Global</div>
+      <div class="terminal-line reveal">
+        <span class="prompt">$</span> whoami <span class="status-dot"></span> open to opportunities
+      </div>
 
       <h1 class="hero-name reveal reveal-delay-1">
-        Mohammad<br>Umar Haris
+        Mohammad Umar Haris<br>
+        <span class="highlight">Data Scientist</span>
       </h1>
 
       <p class="hero-title reveal reveal-delay-2">
-        Machine Learning Engineer
+        4+ years turning <span>messy data</span> into <span>predictive models</span> and <span>production pipelines</span>
       </p>
 
       <p class="hero-desc reveal reveal-delay-3">
-        Building production-ready ML systems — not just models.
-        Focused on NLP pipelines, predictive automation, and cloud-ready deployment
-        across enterprise environments.
+        I build statistical models, ML pipelines, and cloud-based analytics across insurance,
+        logistics, and pharmaceutical domains — with an MSc in Data Science (Distinction)
+        and hands-on experience shipping to Azure.
       </p>
 
       <div class="hero-actions reveal reveal-delay-4">
-        <a href="#projects" class="btn-primary">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          View Work
-        </a>
-        <a href="resume.pdf" download class="btn-secondary">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          Download CV
-        </a>
+        <a href="#projects" class="btn-primary">→ View Work</a>
+        <a href="resume.pdf" download class="btn-secondary">⬇ Download CV</a>
         <a href="#contact" class="btn-secondary">Contact</a>
       </div>
 
       <div class="hero-stats reveal">
-        <div class="hero-stat">
-          <div class="stat-number">4+</div>
-          <div class="stat-label">Years of experience</div>
+        <div>
+          <div class="stat-number">4<span class="u">+</span></div>
+          <div class="stat-label">Years experience</div>
         </div>
-        <div class="hero-stat">
-          <div class="stat-number">22%</div>
-          <div class="stat-label">Forecast accuracy improvement</div>
+        <div>
+          <div class="stat-number">22<span class="u">%</span></div>
+          <div class="stat-label">Forecast accuracy gain</div>
         </div>
-        <div class="hero-stat">
-          <div class="stat-number">35%</div>
-          <div class="stat-label">Reporting latency reduction</div>
+        <div>
+          <div class="stat-number">35<span class="u">%</span></div>
+          <div class="stat-label">Reporting latency cut</div>
         </div>
-        <div class="hero-stat">
+        <div>
           <div class="stat-number">MSc</div>
-          <div class="stat-label">Data Science · Distinction · Essex</div>
+          <div class="stat-label">Data Science · Distinction</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── POSITIONING ───────────────────────────────────────────────── -->
-<section id="positioning">
+<!-- ─── ABOUT ───────────────────────────────────────────────────── -->
+<section id="about">
   <div class="container">
-    <div class="positioning-grid">
-      <div class="positioning-left reveal">
-        <div class="section-label">Approach</div>
-        <h2>Systems thinking.<br>Not just modelling.</h2>
-        <p>
-          Most ML work stops at the notebook. Mine starts there and ends
-          in production — with monitored pipelines, versioned models, and
-          measurable business outcomes.
-        </p>
-        <p>
-          With a background spanning insurance, logistics, and pharmaceuticals,
-          I've built ML systems where correctness and reliability are
-          non-negotiable constraints, not afterthoughts.
-        </p>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-label"><span class="idx">01</span> About</div>
+        <h2 class="section-title">Statistics first.<br>Production second.</h2>
+        <div class="about-text">
+          <p class="lead">
+            I'm a data scientist with 4+ years applying statistical modelling, machine learning,
+            and exploratory data analysis to solve real business problems.
+          </p>
+          <p>
+            Across insurance, logistics, and pharmaceutical domains, I've used Python and SQL
+            to identify cost drivers, build predictive forecasting models, and translate messy
+            operational data into decisions people actually act on.
+          </p>
+          <p>
+            My work spans the full loop — EDA and hypothesis testing, feature engineering,
+            model development, A/B testing, and cloud-based ETL pipelines on Azure — grounded
+            in an MSc in Data Science (Distinction) from the University of Essex.
+          </p>
+        </div>
       </div>
 
-      <div class="positioning-right reveal reveal-delay-2">
-        <div class="positioning-item">
-          <div class="positioning-item-num">01</div>
-          <h3>Pipeline-first engineering</h3>
-          <p>Every model is a component of a larger system. I design for data ingestion, transformation, training, evaluation, and monitoring from the outset.</p>
+      <div class="about-facts reveal reveal-delay-2">
+        <div class="fact-row"><div class="fact-key">ROLE</div><div class="fact-val">Data Scientist / Operations Analyst</div></div>
+        <div class="fact-row"><div class="fact-key">LOCATION</div><div class="fact-val">Delhi, India (Remote / UK-facing)</div></div>
+        <div class="fact-row"><div class="fact-key">FOCUS</div><div class="fact-val">Predictive Modelling · Forecasting · ETL</div></div>
+        <div class="fact-row"><div class="fact-key">TOOLS</div><div class="fact-val">Python, SQL, Azure Databricks, Power BI</div></div>
+        <div class="fact-row"><div class="fact-key">EDUCATION</div><div class="fact-val">MSc Data Science (Distinction), Essex</div></div>
+        <div class="fact-row"><div class="fact-key">STATUS</div><div class="fact-val">Open to new roles</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EXPERIENCE ──────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label reveal"><span class="idx">02</span> Career</div>
+    <h2 class="section-title reveal">Experience</h2>
+
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">Sep 2023 — Present</div>
+          <div class="exp-company">Call Assist Ltd</div>
+          <div class="exp-location">Colchester, UK</div>
         </div>
-        <div class="positioning-item">
-          <div class="positioning-item-num">02</div>
-          <h3>Cloud-native deployment mindset</h3>
-          <p>Azure Databricks, Data Factory, and SQL are my production environment. I build ETL workflows and ML pipelines that scale without manual intervention.</p>
+        <div class="exp-content">
+          <div class="exp-role">Operations Analyst</div>
+          <ul class="exp-bullets">
+            <li>Performed exploratory data analysis and statistical modelling on operational and financial datasets using Python and SQL, identifying cost drivers that <span class="exp-highlight">reduced service costs by 15–20%</span>.</li>
+            <li>Built predictive forecasting models for demand planning and recovery operations, <span class="exp-highlight">improving planning accuracy by 22%</span> through time-series analysis and regression techniques.</li>
+            <li>Applied feature engineering and hypothesis testing on CRM datasets to identify behavioural patterns, <span class="exp-highlight">improving response efficiency by 15%</span>.</li>
+            <li>Developed automated Python scripts for data validation and recurring analytical reports, <span class="exp-highlight">saving 10+ analyst hours per week</span>.</li>
+            <li>Designed KPI tracking dashboards in Power BI for cost, utilisation, and vendor performance, <span class="exp-highlight">improving management visibility by 40%</span>.</li>
+            <li>Engineered cloud-based ETL pipelines using Azure SQL to support scalable analytics and reporting automation.</li>
+          </ul>
         </div>
-        <div class="positioning-item">
-          <div class="positioning-item-num">03</div>
-          <h3>Business outcome orientation</h3>
-          <p>Accuracy metrics matter. So do cost reductions, turnaround time, and stakeholder adoption. I connect model performance to operational impact.</p>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-meta">
+          <div class="exp-period">Mar 2024 — Jan 2025</div>
+          <div class="exp-company">System Engineering</div>
+          <div class="exp-location">London, UK · Contract</div>
         </div>
-        <div class="positioning-item">
-          <div class="positioning-item-num">04</div>
-          <h3>Precision over volume</h3>
-          <p>I build fewer systems, built well — with clean code, reproducible experiments, and deployment documentation that survives handover.</p>
+        <div class="exp-content">
+          <div class="exp-role">Analytics Engineer</div>
+          <ul class="exp-bullets">
+            <li>Built end-to-end data pipelines using Azure Databricks and SQL to process large datasets, <span class="exp-highlight">reducing reporting latency by 35%</span>.</li>
+            <li>Applied statistical analysis and trend evaluation to identify operational patterns supporting data-driven decision-making.</li>
+            <li>Designed Power BI dashboards translating complex statistical analyses into actionable insights, <span class="exp-highlight">improving stakeholder adoption by 40%</span>.</li>
+            <li>Collaborated with cross-functional stakeholders in Agile sprints to define metrics and validate analytical findings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-meta">
+          <div class="exp-period">Dec 2021 — Sep 2022</div>
+          <div class="exp-company">Cognizant Technology Solutions</div>
+          <div class="exp-location">Gurugram, India</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Associate Analyst</div>
+          <ul class="exp-bullets">
+            <li>Developed an Excel-based decision web app, <span class="exp-highlight">reducing policy evaluation time by 30%</span>.</li>
+            <li>Automated policy validation workflows achieving <span class="exp-highlight">99% data accuracy</span>, reducing manual errors.</li>
+            <li>Engineered KPI dashboards in Google Data Studio, accelerating performance monitoring.</li>
+            <li>Conducted A/B testing on ad placements, driving a <span class="exp-highlight">15–20% increase in conversion rates</span>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-3">
+        <div class="exp-meta">
+          <div class="exp-period">Jan 2020 — Dec 2021</div>
+          <div class="exp-company">Inletware Ltd</div>
+          <div class="exp-location">Gurugram, India · Part-Time</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Data Analyst</div>
+          <ul class="exp-bullets">
+            <li>Analysed pharmaceutical e-commerce datasets using SQL to extract business insights supporting market expansion.</li>
+            <li>Built 30+ dashboards in Power BI and Tableau to visualise sales, inventory, and demand trends, <span class="exp-highlight">improving reporting efficiency by 20%</span>.</li>
+            <li>Developed time-series forecasting models and predictive analytics workflows for demand planning and inventory optimisation.</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PROJECTS ──────────────────────────────────────────────────── -->
+<!-- ─── PROJECTS ────────────────────────────────────────────────── -->
 <section id="projects">
   <div class="container">
-    <div class="projects-header reveal">
-      <h2>Featured<br>Systems</h2>
-      <p>Framed as engineering projects — with architecture, data flow, and deployment strategy.</p>
-    </div>
+    <div class="section-label reveal"><span class="idx">03</span> Selected work</div>
+    <h2 class="section-title reveal">Projects</h2>
 
-    <!-- PROJECT 1: nlp_goutprediction -->
+    <!-- PROJECT 1 -->
     <div class="project-card reveal">
       <div class="project-card-header">
         <div>
           <div class="project-tag">NLP · Clinical Prediction</div>
           <h3 class="project-title">Gout Prediction Using NLP</h3>
           <p class="project-problem">
-            Clinical gout diagnosis relies heavily on subjective symptom descriptions in free-text patient records.
-            This project applies NLP to extract structured clinical signals from unstructured text and trains
-            a prediction model to flag gout risk — reducing dependence on manual clinical interpretation.
+            Clinical gout diagnosis relies heavily on subjective symptom descriptions in free-text
+            patient records. This project applies NLP to extract structured clinical signals from
+            unstructured text and trains a model to flag gout risk — reducing dependence on manual
+            interpretation.
           </p>
         </div>
-        <div class="project-status">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            Productionising
-          </div>
-        </div>
+        <div class="status-badge"><span class="status-dot"></span> Productionising</div>
       </div>
-
       <div class="project-card-body">
         <div>
-          <div class="project-section-label">Architecture</div>
-          <div class="arch-flow">
-            <div class="arch-step">
-              <div class="arch-step-num">01</div>
-              <div class="arch-step-content">
-                <h4>Text Ingestion & Cleaning</h4>
-                <p>Clinical text preprocessing — tokenisation, stopword removal, medical entity normalisation.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">02</div>
-              <div class="arch-step-content">
-                <h4>NLP Feature Extraction</h4>
-                <p>TF-IDF and n-gram features. Symptom keyword extraction for domain-specific signal engineering.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">03</div>
-              <div class="arch-step-content">
-                <h4>Prediction Model</h4>
-                <p>Classification pipeline (Logistic Regression / Random Forest) trained on labelled clinical records.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">04</div>
-              <div class="arch-step-content">
-                <h4>Evaluation</h4>
-                <p>Precision, recall, F1 and AUC-ROC scoring. Cross-validated on held-out clinical split.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">05</div>
-              <div class="arch-step-content">
-                <h4>Deployment Roadmap</h4>
-                <p>FastAPI inference endpoint → Docker image → Azure Container Instance. CI/CD via GitHub Actions.</p>
-              </div>
-            </div>
-          </div>
+          <div class="project-section-label">Approach</div>
+          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
+            Text preprocessing (tokenisation, stopword removal, entity normalisation) → TF-IDF /
+            n-gram feature extraction → classification pipeline (Logistic Regression / Random
+            Forest) → evaluation via precision, recall, F1, and AUC-ROC.
+          </p>
         </div>
-
         <div>
           <div class="project-section-label">Stack</div>
           <div class="stack-tags">
@@ -1275,114 +685,43 @@
             <span class="stack-tag">NLTK</span>
             <span class="stack-tag">spaCy</span>
             <span class="stack-tag">Scikit-learn</span>
-            <span class="stack-tag">TF-IDF</span>
             <span class="stack-tag">Pandas</span>
             <span class="stack-tag">Jupyter</span>
-            <span class="stack-tag">Matplotlib</span>
-          </div>
-
-          <div style="margin-top:32px">
-            <div class="project-section-label">Production Roadmap</div>
-            <div class="arch-flow">
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>Refactor notebook to modular Python</h4>
-                  <p>Separate data, features, training, and evaluation into clean modules.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>Wrap in FastAPI inference endpoint</h4>
-                  <p>POST /predict accepts raw text, returns risk score + confidence.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>Containerise & deploy to Azure</h4>
-                  <p>Docker image → Azure Container Apps. GitHub Actions CI/CD on push.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-
       <div class="project-card-footer">
-        <div class="project-links">
-          <a href="https://github.com/mohdumarharis/nlp_goutprediction" class="project-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-        <span class="roadmap-note">Deploying to Azure · Q1 2026</span>
+        <a href="https://github.com/mohdumarharis/nlp_goutprediction" class="project-link" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View on GitHub
+        </a>
+        <span class="roadmap-note">github.com/mohdumarharis</span>
       </div>
     </div>
 
-    <!-- PROJECT 2: DNA_sequencing -->
+    <!-- PROJECT 2 -->
     <div class="project-card reveal reveal-delay-1">
       <div class="project-card-header">
         <div>
-          <div class="project-tag">Bioinformatics · Python Web App</div>
+          <div class="project-tag">Bioinformatics · Python App</div>
           <h3 class="project-title">DNA Sequence Analysis & Visualisation Platform</h3>
           <p class="project-problem">
-            Bioinformatics researchers working with raw sequence data lacked a fast, accessible tool
-            for computing and visualising key metrics — sequence length distributions, GC content, and
-            compositional profiles — without writing custom scripts for each dataset.
+            Bioinformatics researchers lacked a fast, accessible tool for computing and visualising
+            key sequence metrics — length distributions, GC content, compositional profiles —
+            without writing custom scripts for each dataset.
           </p>
         </div>
-        <div class="project-status">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            Live · Productionising
-          </div>
-        </div>
+        <div class="status-badge"><span class="status-dot"></span> Live</div>
       </div>
-
       <div class="project-card-body">
         <div>
-          <div class="project-section-label">Architecture</div>
-          <div class="arch-flow">
-            <div class="arch-step">
-              <div class="arch-step-num">01</div>
-              <div class="arch-step-content">
-                <h4>File Upload & Parsing</h4>
-                <p>Users upload FASTA/sequence files. Python backend parses records and validates format.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">02</div>
-              <div class="arch-step-content">
-                <h4>Sequence Metrics Engine</h4>
-                <p>Computes sequence length, GC content, nucleotide frequency distributions, and compositional stats.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">03</div>
-              <div class="arch-step-content">
-                <h4>Interactive Visualisation</h4>
-                <p>Dynamic charts rendered in-browser. Histogram, bar, and line views per metric.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">04</div>
-              <div class="arch-step-content">
-                <h4>Web Interface</h4>
-                <p>Clean Python-powered web app. No external dependencies required from user.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">05</div>
-              <div class="arch-step-content">
-                <h4>Deployment Roadmap</h4>
-                <p>Containerise with Docker → deploy to Azure App Service with CI/CD via GitHub Actions.</p>
-              </div>
-            </div>
-          </div>
+          <div class="project-section-label">Approach</div>
+          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
+            FASTA/sequence file upload and parsing → sequence metrics engine (length, GC content,
+            nucleotide frequency) → interactive in-browser visualisation via a lightweight Python
+            web app.
+          </p>
         </div>
-
         <div>
           <div class="project-section-label">Stack</div>
           <div class="stack-tags">
@@ -1390,340 +729,119 @@
             <span class="stack-tag">BioPython</span>
             <span class="stack-tag">Pandas</span>
             <span class="stack-tag">Matplotlib</span>
-            <span class="stack-tag">Plotly</span>
             <span class="stack-tag">Streamlit</span>
-            <span class="stack-tag">Docker</span>
-          </div>
-
-          <div style="margin-top:32px">
-            <div class="project-section-label">Production Roadmap</div>
-            <div class="arch-flow">
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>Containerise with Docker</h4>
-                  <p>App + dependencies packaged into a reproducible image.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>Deploy to Azure App Service</h4>
-                  <p>Publicly accessible endpoint with auto-scaling and health monitoring.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">→</div>
-                <div class="arch-step-content">
-                  <h4>GitHub Actions CI/CD</h4>
-                  <p>Automated test and deploy pipeline on every push to main.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-
       <div class="project-card-footer">
-        <div class="project-links">
-          <a href="https://github.com/mohdumarharis/DNA_sequencing" class="project-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            View on GitHub
-          </a>
-        </div>
-        <span class="roadmap-note">Containerising · Docker + Azure · Q1 2026</span>
+        <a href="https://github.com/mohdumarharis/DNA_sequencing" class="project-link" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View on GitHub
+        </a>
+        <span class="roadmap-note">github.com/mohdumarharis</span>
       </div>
     </div>
 
-    <!-- PROJECT 3: Experience-based — Demand Forecasting -->
+    <!-- PROJECT 3 -->
     <div class="project-card reveal reveal-delay-2">
       <div class="project-card-header">
         <div>
           <div class="project-tag">Time Series · Forecasting · Enterprise</div>
-          <h3 class="project-title">Demand Forecasting & Logistics Routing Engine</h3>
+          <h3 class="project-title">Demand Forecasting for Recovery Operations</h3>
           <p class="project-problem">
-            Recovery operations at Call Assist relied on manual demand estimation — planners were reacting
-            to shortfalls rather than anticipating them. No predictive layer existed, leading to
-            inefficient vendor allocation and avoidable transportation costs at scale.
+            Recovery operations at Call Assist relied on manual demand estimation — planners
+            reacted to shortfalls rather than anticipating them, leading to inefficient vendor
+            allocation and avoidable costs.
           </p>
         </div>
-        <div class="project-status">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            Production · Call Assist Ltd
-          </div>
-        </div>
+        <div class="status-badge"><span class="status-dot"></span> Production</div>
       </div>
-
       <div class="project-card-body">
         <div>
-          <div class="project-section-label">Architecture</div>
-          <div class="arch-flow">
-            <div class="arch-step">
-              <div class="arch-step-num">01</div>
-              <div class="arch-step-content">
-                <h4>Historical Data ETL</h4>
-                <p>Python + Azure Data Factory pipeline ingesting 3 years of operational records into Databricks.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">02</div>
-              <div class="arch-step-content">
-                <h4>Feature Engineering</h4>
-                <p>Lag features, rolling averages, seasonality decomposition, and vendor capacity signals.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">03</div>
-              <div class="arch-step-content">
-                <h4>Ensemble Forecasting</h4>
-                <p>XGBoost + LightGBM ensemble with Prophet baseline. Cross-validated on 6-month holdout.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">04</div>
-              <div class="arch-step-content">
-                <h4>Routing Optimisation</h4>
-                <p>Forecast outputs feed a constraint-based vendor allocation model, eliminating idle capacity.</p>
-              </div>
-            </div>
-            <div class="arch-step">
-              <div class="arch-step-num">05</div>
-              <div class="arch-step-content">
-                <h4>Power BI Dashboard</h4>
-                <p>Forecast results surfaced to operations team with 7-day rolling prediction window.</p>
-              </div>
-            </div>
-          </div>
+          <div class="project-section-label">Approach</div>
+          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
+            Historical operational data ETL (Python + Azure SQL) → lag / rolling-average / seasonality
+            feature engineering → time-series regression forecasting → Power BI dashboard with a
+            7-day rolling prediction window for the operations team.
+          </p>
         </div>
-
         <div>
-          <div class="project-section-label">Stack</div>
-          <div class="stack-tags">
-            <span class="stack-tag">Python</span>
-            <span class="stack-tag">XGBoost</span>
-            <span class="stack-tag">LightGBM</span>
-            <span class="stack-tag">Prophet</span>
-            <span class="stack-tag">Scikit-learn</span>
-            <span class="stack-tag">PySpark</span>
-            <span class="stack-tag">Azure Databricks</span>
-            <span class="stack-tag">Azure Data Factory</span>
-            <span class="stack-tag">Power BI</span>
-          </div>
-
-          <div style="margin-top:32px">
-            <div class="project-section-label">Measured Outcomes</div>
-            <div class="arch-flow">
-              <div class="arch-step">
-                <div class="arch-step-num">↑</div>
-                <div class="arch-step-content">
-                  <h4>22% planning accuracy improvement</h4>
-                  <p>Measured against 3-month rolling average baseline.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">↓</div>
-                <div class="arch-step-content">
-                  <h4>14% transportation cost reduction</h4>
-                  <p>Via demand-matched vendor allocation eliminating over-provisioning.</p>
-                </div>
-              </div>
-              <div class="arch-step">
-                <div class="arch-step-num">↓</div>
-                <div class="arch-step-content">
-                  <h4>18–20% service cost reduction</h4>
-                  <p>Through pipeline automation across operational and financial datasets.</p>
-                </div>
-              </div>
-            </div>
+          <div class="project-section-label">Measured Outcomes</div>
+          <div class="metric-list">
+            <div class="metric-item"><span class="m-num">+22%</span> Planning accuracy improvement</div>
+            <div class="metric-item"><span class="m-num">−18%</span> Service cost reduction</div>
+            <div class="metric-item"><span class="m-num">+40%</span> Management visibility (KPI dashboards)</div>
           </div>
         </div>
       </div>
-
       <div class="project-card-footer">
-        <div class="project-links">
-          <a href="https://github.com/mohdumarharis" class="project-link" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            Code available on request
-          </a>
-        </div>
-        <span class="roadmap-note">Enterprise deployment · Call Assist Ltd · UK</span>
+        <span class="project-link">Code available on request</span>
+        <span class="roadmap-note">Call Assist Ltd · UK</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── SKILLS ────────────────────────────────────────────────────── -->
+<!-- ─── SKILLS ──────────────────────────────────────────────────── -->
 <section id="skills">
   <div class="container">
-    <div class="skills-header reveal">
-      <div class="section-label">Capabilities</div>
-      <h2>Technical Stack</h2>
-    </div>
+    <div class="section-label reveal"><span class="idx">04</span> Capabilities</div>
+    <h2 class="section-title reveal">Technical Stack</h2>
 
     <div class="skills-grid reveal reveal-delay-1">
       <div class="skill-group">
+        <div class="skill-group-label">Programming & Data</div>
+        <ul class="skill-list">
+          <li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li>
+          <li>SQL (PostgreSQL, MySQL)</li><li>R (academic)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
         <div class="skill-group-label">Machine Learning</div>
         <ul class="skill-list">
-          <li>Predictive Modelling</li>
-          <li>Classification & Regression</li>
-          <li>Time Series Forecasting</li>
-          <li>Feature Engineering</li>
-          <li>Hyperparameter Tuning</li>
-          <li>A/B Testing & Experimentation</li>
-          <li>Cross-Validation</li>
+          <li>Predictive Modelling</li><li>Classification</li><li>Regression</li>
+          <li>Feature Engineering</li><li>Hyperparameter Tuning</li>
+          <li>Cross-Validation</li><li>Time Series Analysis</li>
+          <li>NLP (academic)</li><li>TensorFlow (projects)</li>
         </ul>
       </div>
-
       <div class="skill-group">
-        <div class="skill-group-label">NLP & Deep Learning</div>
+        <div class="skill-group-label">Statistics</div>
         <ul class="skill-list">
-          <li>Text Classification</li>
-          <li>NLP Pipelines (spaCy)</li>
-          <li>HuggingFace Transformers</li>
-          <li>DistilBERT / BERT fine-tuning</li>
-          <li>TensorFlow (Projects)</li>
-          <li>Scikit-learn</li>
-          <li>GenAI Workflows</li>
+          <li>Exploratory Data Analysis</li><li>Hypothesis Testing</li>
+          <li>A/B Testing</li><li>Statistical Modelling</li><li>Forecasting</li>
         </ul>
       </div>
-
       <div class="skill-group">
         <div class="skill-group-label">Data Engineering</div>
         <ul class="skill-list">
-          <li>ETL Pipeline Design</li>
-          <li>Azure Databricks</li>
-          <li>Apache Spark / PySpark</li>
-          <li>Azure Data Factory</li>
-          <li>Azure SQL / PostgreSQL</li>
-          <li>Data Warehousing</li>
-          <li>Python Automation</li>
+          <li>Azure Databricks</li><li>ETL Pipelines</li>
+          <li>Data Warehousing</li><li>Azure SQL</li>
         </ul>
       </div>
-
       <div class="skill-group">
-        <div class="skill-group-label">MLOps</div>
+        <div class="skill-group-label">Visualisation & Reporting</div>
         <ul class="skill-list">
-          <li>Model Monitoring & Logging</li>
-          <li>Docker Containerisation</li>
-          <li>FastAPI Inference APIs</li>
-          <li>CI/CD Pipelines</li>
-          <li>MLflow (Experiment Tracking)</li>
-          <li>Model Versioning</li>
-          <li>Azure Monitor</li>
+          <li>Power BI</li><li>Tableau</li><li>Google Data Studio</li>
+          <li>Data Storytelling</li><li>Dashboard Design</li>
         </ul>
       </div>
-
       <div class="skill-group">
-        <div class="skill-group-label">Cloud & Infrastructure</div>
+        <div class="skill-group-label">Practices</div>
         <ul class="skill-list">
-          <li>Azure (AZ-900 Certified)</li>
-          <li>Azure Container Instances</li>
-          <li>GCP (Exposure)</li>
-          <li>GitHub Actions</li>
-          <li>Vercel (Frontend)</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-label">Languages & Tooling</div>
-        <ul class="skill-list">
-          <li>Python (Primary)</li>
-          <li>SQL (PostgreSQL, MySQL)</li>
-          <li>R (Academic)</li>
-          <li>Power BI / DAX</li>
-          <li>Tableau</li>
-          <li>Git / GitHub</li>
-          <li>Agile / Scrum</li>
+          <li>Agile / Scrum</li><li>Stakeholder Communication</li>
+          <li>Cross-Functional Collaboration</li><li>Git / GitHub</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── EXPERIENCE ─────────────────────────────────────────────────── -->
-<section id="experience">
-  <div class="container">
-    <div class="experience-header reveal">
-      <div class="section-label">Career</div>
-      <h2>Experience</h2>
-    </div>
-
-    <div class="exp-timeline">
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Sep 2023 – Jan 2026</div>
-          <div class="exp-company">Call Assist Ltd</div>
-          <div class="exp-location">Colchester, UK</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Operations Analyst · ML & Data</div>
-          <ul class="exp-bullets">
-            <li>Engineered automated data pipelines in Python and Azure, standardising operational datasets and <span class="exp-highlight">reducing service costs by 18–20%</span>.</li>
-            <li>Built predictive forecasting models for demand and recovery operations in Databricks, <span class="exp-highlight">improving planning accuracy by 22%</span> through time-series regression techniques.</li>
-            <li>Implemented MLOps monitoring and logging in Azure to ensure model reliability across high-volume CRM analytics workflows.</li>
-            <li>Applied feature engineering and hypothesis testing on CRM datasets to identify behavioural drivers, <span class="exp-highlight">improving response efficiency by 15%</span>.</li>
-            <li>Engineered cloud-based ETL pipelines (Azure SQL + Databricks), <span class="exp-highlight">reducing reporting turnaround by 35%</span> and saving 10+ analyst hours per week.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-meta">
-          <div class="exp-period">Mar 2024 – Jan 2025</div>
-          <div class="exp-company">System Engineering</div>
-          <div class="exp-location">London, UK · Contract</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Analytics Engineer</div>
-          <ul class="exp-bullets">
-            <li>Designed end-to-end data transformation pipelines in Azure Databricks for large-scale datasets, <span class="exp-highlight">reducing reporting latency by 35%</span>.</li>
-            <li>Optimised Apache Spark SQL workflows, <span class="exp-highlight">improving BI tool performance by 40%</span> during peak reporting cycles.</li>
-            <li>Developed feature engineering scripts in Python to support predictive analytics and statistical modelling for manufacturing stakeholders.</li>
-            <li>Delivered interactive Power BI dashboards in Agile sprints, <span class="exp-highlight">increasing stakeholder data adoption by 40%</span>.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-2">
-        <div class="exp-meta">
-          <div class="exp-period">Dec 2021 – Sep 2022</div>
-          <div class="exp-company">Cognizant Technology Solutions</div>
-          <div class="exp-location">Gurugram, India</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Associate Analyst</div>
-          <ul class="exp-bullets">
-            <li>Developed an Excel-based decision automation system, <span class="exp-highlight">reducing policy evaluation time by 30%</span>.</li>
-            <li>Automated policy validation workflows achieving <span class="exp-highlight">99% data accuracy</span> and eliminating manual errors at scale.</li>
-            <li>Conducted A/B testing on ad placements, driving <span class="exp-highlight">15–20% increase in conversion rates</span>.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-3">
-        <div class="exp-meta">
-          <div class="exp-period">Jan 2020 – Dec 2021</div>
-          <div class="exp-company">Inletware Ltd</div>
-          <div class="exp-location">Gurugram, India · Part-Time</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Data Analyst</div>
-          <ul class="exp-bullets">
-            <li>Led analytics for a pharmaceutical e-commerce platform integrating Azure and GCP data sources to support expansion into 3 regions.</li>
-            <li>Developed time-series forecasting and demand planning models, <span class="exp-highlight">reducing stockouts by 12%</span>.</li>
-            <li>Built 30+ BI dashboards in Power BI and Tableau, <span class="exp-highlight">improving reporting efficiency by 20%</span>.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── EDUCATION ──────────────────────────────────────────────────── -->
+<!-- ─── EDUCATION ───────────────────────────────────────────────── -->
 <section id="education">
   <div class="container">
-    <div class="section-label reveal">Education & Certifications</div>
+    <div class="section-label reveal"><span class="idx">05</span> Education</div>
+    <h2 class="section-title reveal">Education & Certifications</h2>
     <div class="edu-grid reveal reveal-delay-1">
       <div class="edu-card">
         <div class="edu-degree">MSc Data Science and its Applications</div>
@@ -1736,7 +854,7 @@
         <div class="edu-school">Jamia Hamdard University, India</div>
         <div class="edu-year">2017 – 2021</div>
         <div class="edu-distinction">First Class / 2:1 Equivalent</div>
-        <div class="cert-list" style="margin-top:28px">
+        <div class="cert-list">
           <div class="cert-item">Microsoft Certified: Power BI Data Analyst Associate</div>
           <div class="cert-item">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
         </div>
@@ -1745,74 +863,23 @@
   </div>
 </section>
 
-<!-- ─── ROADMAP ────────────────────────────────────────────────────── -->
-<section id="roadmap">
-  <div class="container">
-    <div class="roadmap-inner">
-      <div class="roadmap-left reveal">
-        <div class="section-label" style="color:rgba(255,255,255,0.3)">Forward motion</div>
-        <h2>Currently productionising<br>ML systems.</h2>
-        <p>Projects are in active development — moving from notebook-stage to Docker-containerised, CI/CD-deployed, monitored pipelines on Azure.</p>
-      </div>
-
-      <div class="roadmap-items reveal reveal-delay-2">
-        <div class="roadmap-item">
-          <div class="roadmap-icon">01</div>
-          <div>
-            <h4>Docker containerisation</h4>
-            <p>FastAPI + model weights packaged into reproducible images</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-icon">02</div>
-          <div>
-            <h4>CI/CD via GitHub Actions</h4>
-            <p>Automated test → build → deploy pipeline on every push</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-icon">03</div>
-          <div>
-            <h4>Azure Container Apps deployment</h4>
-            <p>Scalable serverless hosting for inference endpoints</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-icon">04</div>
-          <div>
-            <h4>MLflow experiment tracking</h4>
-            <p>Model versioning, parameter logging, and metric dashboards</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-icon">05</div>
-          <div>
-            <h4>Drift monitoring</h4>
-            <p>Automated alerts on feature and prediction distribution shifts</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
+<!-- ─── CONTACT ─────────────────────────────────────────────────── -->
 <section id="contact">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left reveal">
-        <div class="section-label">Get in touch</div>
-        <h2>Open to the right<br>ML Engineering role.</h2>
+        <div class="section-label"><span class="idx">06</span> Get in touch</div>
+        <h2 class="section-title">Let's build something<br>data-driven.</h2>
         <p>
-          Looking for production-focused ML positions at companies where systems 
-          thinking and deployment quality matter. FAANG, growth-stage tech, and 
+          Open to Data Scientist / ML Engineer roles where statistical rigor and
+          business impact both matter — insurance, logistics, healthcare, and
           enterprise SaaS all of interest.
         </p>
 
         <div class="contact-info-list">
           <div class="contact-info-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="/cdn-cgi/l/email-protection#c4a9abaca0aba9a5b6aca5b6adb784a3a9a5ada8eaa7aba9"><span class="__cf_email__" data-cfemail="1b7674737f74767a69737a6972685b7c767a727735787476">[email&#160;protected]</span></a>
+            <a href="#" id="emailLink">— loading —</a>
           </div>
           <div class="contact-info-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1844,24 +911,21 @@
             <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the role or project..." required></textarea>
           </div>
           <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
-          <div class="form-success" id="formSuccess">
-            Message received. I'll respond within 24 hours.
-          </div>
+          <div class="form-success" id="formSuccess">Message received. I'll respond within 24 hours.</div>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ────────────────────────────────────────────────────── -->
+<!-- ─── FOOTER ──────────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">M. Umar Haris</div>
+      <div class="footer-logo">umar.haris</div>
       <ul class="footer-links">
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="https://github.com/mohdumarharis" target="_blank">GitHub</a></li>
         <li><a href="https://linkedin.com/in/mohdomarharis" target="_blank">LinkedIn</a></li>
       </ul>
@@ -1870,90 +934,85 @@
   </div>
 </footer>
 
-<!-- ─── SCRIPTS ───────────────────────────────────────────────────── -->
+<!-- ─── SCRIPTS ─────────────────────────────────────────────────── -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-  // ── Scroll reveal ──────────────────────────────────────────────
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile menu
+    const hamburger = document.querySelector('.nav-hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+      });
+    }
+
+    // Lightweight email de-obfuscation (avoids plain-text scraping)
+    const emailParts = ['mohdomarharis', 'gmail.com'];
+    const emailLink = document.getElementById('emailLink');
+    if (emailLink) {
+      const addr = emailParts.join('@');
+      emailLink.href = 'mailto:' + addr;
+      emailLink.textContent = addr;
+    }
+
+    // Contact form (EmailJS)
+    const EMAILJS_PUBLIC_KEY  = 'ZhiXrXD1EFUU0rlhH';
+    const EMAILJS_SERVICE_ID  = 'service_en0x8vo';
+    const EMAILJS_TEMPLATE_ID = 'template_5nu0v6f';
+
+    (function(){
+      const s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+      s.onload = () => emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+      document.head.appendChild(s);
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const success = document.getElementById('formSuccess');
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name:    document.getElementById('name').value,
+          from_email:   document.getElementById('email').value,
+          from_company: document.getElementById('company').value,
+          message:      document.getElementById('message').value,
+          to_name:      'Mohammad Umar Haris',
+        });
+        this.reset();
+        success.style.display = 'block';
+        btn.style.display = 'none';
+      } catch (err) {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Something went wrong. Please email me directly at mohdomarharis@gmail.com');
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // ── Nav scroll state ───────────────────────────────────────────
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-
-  // ── Mobile menu ────────────────────────────────────────────────
-  // Attach via addEventListener so it works regardless of script load order
-  const hamburger = document.querySelector('.nav-hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', function () {
-      mobileMenu.classList.toggle('open');
-    });
-    // Close menu when any mobile link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-    });
-  }
-
-  // ── Contact form (EmailJS) ─────────────────────────────────────
-  // SETUP INSTRUCTIONS:
-  // 1. Create free account at https://emailjs.com
-  // 2. Add Gmail service → note your Service ID
-  // 3. Create email template → note your Template ID
-  // 4. Copy your Public Key from Account → API Keys
-  // 5. Replace the three placeholder values below
-
-  const EMAILJS_PUBLIC_KEY  = 'ZhiXrXD1EFUU0rlhH';
-  const EMAILJS_SERVICE_ID  = 'service_en0x8vo';
-  const EMAILJS_TEMPLATE_ID = 'template_5nu0v6f';
-
-  // Load EmailJS SDK
-  (function(){
-    const s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    s.onload = () => emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    document.head.appendChild(s);
-  })();
-
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submitBtn');
-    const success = document.getElementById('formSuccess');
-
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        from_name:    document.getElementById('name').value,
-        from_email:   document.getElementById('email').value,
-        from_company: document.getElementById('company').value,
-        message:      document.getElementById('message').value,
-        to_name:      'Mohammad Umar Haris',
-      });
-      this.reset();
-      success.style.display = 'block';
-      btn.style.display = 'none';
-    } catch (err) {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      alert('Something went wrong. Please email me directly at mohdomarharis@gmail.com');
-    }
   });
-
-  }); // end DOMContentLoaded
 </script>
 
 </body>
