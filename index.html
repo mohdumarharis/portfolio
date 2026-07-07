@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Umar Haris — Data Scientist & ML Engineer</title>
-  <meta name="description" content="Data Scientist with 4+ years building statistical models, ML pipelines, and cloud-based analytics across insurance, logistics, and pharmaceutical domains. MSc Data Science (Distinction), University of Essex." />
-  <meta name="keywords" content="Data Scientist, Machine Learning Engineer, Python, SQL, Azure Databricks, Power BI, NLP, Forecasting" />
-  <meta property="og:title" content="Mohammad Umar Haris — Data Scientist & ML Engineer" />
-  <meta property="og:description" content="Turning data into decisions — predictive models, ETL pipelines, and analytics that move business metrics." />
+  <title>Mohammad Umar Haris — Data Scientist · GenAI & Applied ML</title>
+  <meta name="description" content="Data Scientist with 4+ years across analytics, machine learning, and Generative AI. Deploying LLM pipelines, predictive models, and cloud ML infrastructure on Azure with MLflow, FastAPI, and GitHub Actions. MSc Data Science (Distinction), University of Essex." />
+  <meta name="keywords" content="Data Scientist, Machine Learning Engineer, MLOps, Generative AI, LLM, Python, Azure, MLflow, FastAPI, Forecasting" />
+  <meta property="og:title" content="Mohammad Umar Haris — Data Scientist · GenAI & Applied ML" />
+  <meta property="og:description" content="LLM pipelines, MLOps, and predictive modelling across insurance, logistics, and pharma." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -178,6 +178,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
     .terminal-line .prompt { color: var(--accent); }
     .terminal-line .status-dot {
@@ -206,18 +207,18 @@
 
     .hero-title {
       font-family: var(--mono);
-      font-size: clamp(14px, 1.6vw, 17px);
+      font-size: clamp(13px, 1.5vw, 16px);
       color: var(--text-muted);
       margin-bottom: 32px;
       letter-spacing: 0.01em;
     }
-    .hero-title span { color: var(--text); }
+    .hero-title span { color: var(--accent); }
 
     .hero-desc {
       font-size: 16.5px;
       font-weight: 300;
       color: var(--text-muted);
-      max-width: 560px;
+      max-width: 600px;
       line-height: 1.75;
       margin-bottom: 48px;
     }
@@ -260,18 +261,23 @@
     .about-text p { font-size: 16px; font-weight: 300; color: var(--text-muted); line-height: 1.8; margin-bottom: 18px; }
     .about-text .lead { color: var(--text); font-weight: 400; font-size: 18px; }
 
+    .arc { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; }
+    .arc-node { color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border); padding: 5px 12px; border-radius: 3px; }
+    .arc-node.now { color: var(--accent); border-color: var(--accent); }
+    .arc-arrow { color: var(--text-faint); }
+
     .about-facts { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-    .fact-row { display: grid; grid-template-columns: 130px 1fr; padding: 18px 22px; border-bottom: 1px solid var(--border); background: var(--bg-card); }
+    .fact-row { display: grid; grid-template-columns: 120px 1fr; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg-card); }
     .fact-row:last-child { border-bottom: none; }
-    .fact-key { font-family: var(--mono); font-size: 11.5px; color: var(--accent); letter-spacing: 0.04em; }
-    .fact-val { font-size: 13.5px; color: var(--text-muted); }
+    .fact-key { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.04em; }
+    .fact-val { font-size: 13px; color: var(--text-muted); }
 
     /* ─── EXPERIENCE ─────────────────────────────────────────── */
     #experience { background: var(--bg); }
     .exp-timeline { display: flex; flex-direction: column; }
     .exp-item {
       display: grid;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 210px 1fr;
       gap: 40px;
       padding: 40px 0;
       border-bottom: 1px solid var(--border);
@@ -285,7 +291,8 @@
     .exp-company { font-family: var(--display); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
     .exp-location { font-size: 12.5px; color: var(--text-faint); font-weight: 300; }
 
-    .exp-role { font-family: var(--display); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); margin-bottom: 18px; }
+    .exp-role { font-family: var(--display); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); margin-bottom: 6px; }
+    .exp-tagline { font-family: var(--mono); font-size: 11.5px; color: var(--accent-2); margin-bottom: 18px; }
 
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 11px; }
     .exp-bullets li { font-size: 14.5px; color: var(--text-muted); font-weight: 300; line-height: 1.65; padding-left: 20px; position: relative; }
@@ -334,9 +341,11 @@
       white-space: nowrap;
     }
     .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: blink 2s infinite; }
+    .status-dot.live { background: var(--accent); }
 
     .project-card-body { padding: 30px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .project-section-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--text-faint); margin-bottom: 14px; }
+    .project-approach { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
 
     .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .stack-tag { font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg-elev); border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; }
@@ -352,7 +361,7 @@
       background: var(--bg-elev);
     }
     .project-link { font-family: var(--mono); font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
-    .project-link:hover { color: var(--accent); }
+    a.project-link:hover { color: var(--accent); }
     .roadmap-note { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); }
 
     /* ─── SKILLS ─────────────────────────────────────────────── */
@@ -375,9 +384,7 @@
       font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
       color: var(--accent); background: var(--accent-dim); padding: 4px 10px; border-radius: 3px;
     }
-    .cert-list { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
-    .cert-item { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--text-muted); }
-    .cert-item::before { content: '✓'; font-size: 12px; color: var(--accent); font-weight: 600; }
+    .edu-note { margin-top: 18px; font-size: 13px; color: var(--text-faint); font-weight: 300; line-height: 1.6; }
 
     /* ─── CONTACT ────────────────────────────────────────────── */
     #contact { background: var(--bg); padding: 120px 0; }
@@ -486,7 +493,7 @@
   <div class="container">
     <div class="hero-inner">
       <div class="terminal-line reveal">
-        <span class="prompt">$</span> whoami <span class="status-dot"></span> open to opportunities
+        <span class="prompt">$</span> whoami <span class="status-dot"></span> open to Data Scientist / ML / GenAI roles
       </div>
 
       <h1 class="hero-name reveal reveal-delay-1">
@@ -495,13 +502,14 @@
       </h1>
 
       <p class="hero-title reveal reveal-delay-2">
-        4+ years turning <span>messy data</span> into <span>predictive models</span> and <span>production pipelines</span>
+        <span>GenAI</span> &amp; <span>Applied ML</span> · LLM pipelines · MLOps · Predictive modelling
       </p>
 
       <p class="hero-desc reveal reveal-delay-3">
-        I build statistical models, ML pipelines, and cloud-based analytics across insurance,
-        logistics, and pharmaceutical domains — with an MSc in Data Science (Distinction)
-        and hands-on experience shipping to Azure.
+        Data Scientist with 4+ years across analytics, machine learning, and Generative AI
+        application development in insurance, logistics, and pharmaceutical domains. I design
+        and deploy LLM-based pipelines, predictive models, and cloud ML infrastructure on Azure
+        using Python, Databricks, MLflow, FastAPI, and GitHub Actions.
       </p>
 
       <div class="hero-actions reveal reveal-delay-4">
@@ -513,15 +521,15 @@
       <div class="hero-stats reveal">
         <div>
           <div class="stat-number">4<span class="u">+</span></div>
-          <div class="stat-label">Years experience</div>
+          <div class="stat-label">Years in data &amp; ML</div>
+        </div>
+        <div>
+          <div class="stat-number">GenAI</div>
+          <div class="stat-label">Production LLM pipeline shipped</div>
         </div>
         <div>
           <div class="stat-number">22<span class="u">%</span></div>
           <div class="stat-label">Forecast accuracy gain</div>
-        </div>
-        <div>
-          <div class="stat-number">35<span class="u">%</span></div>
-          <div class="stat-label">Reporting latency cut</div>
         </div>
         <div>
           <div class="stat-number">MSc</div>
@@ -538,32 +546,45 @@
     <div class="about-grid">
       <div class="reveal">
         <div class="section-label"><span class="idx">01</span> About</div>
-        <h2 class="section-title">Statistics first.<br>Production second.</h2>
+        <h2 class="section-title">From analytics<br>to applied AI.</h2>
         <div class="about-text">
           <p class="lead">
-            I'm a data scientist with 4+ years applying statistical modelling, machine learning,
-            and exploratory data analysis to solve real business problems.
+            I build ML and Generative AI systems that ship — not just notebooks. My work spans
+            LLM-orchestrated pipelines, predictive modelling, and the MLOps stack that keeps
+            them running in production.
           </p>
           <p>
-            Across insurance, logistics, and pharmaceutical domains, I've used Python and SQL
-            to identify cost drivers, build predictive forecasting models, and translate messy
-            operational data into decisions people actually act on.
+            Over 5–6 years my career has followed one intentional arc: from SQL, dashboards, and
+            forecasting, through enterprise analytics and automation, into classical ML during my
+            MSc, and now into applied ML and GenAI at production scale. The Bachelor of Pharmacy
+            underneath it gives me a genuine edge in healthcare and life-sciences data — from
+            clinical NLP to pharma demand forecasting.
           </p>
           <p>
-            My work spans the full loop — EDA and hypothesis testing, feature engineering,
-            model development, A/B testing, and cloud-based ETL pipelines on Azure — grounded
-            in an MSc in Data Science (Distinction) from the University of Essex.
+            I care about correctness, deployment quality, and connecting model performance to real
+            business outcomes — grounded in an MSc in Data Science (Distinction) from the University
+            of Essex.
           </p>
+        </div>
+
+        <div class="arc">
+          <span class="arc-node">Data Analyst</span>
+          <span class="arc-arrow">→</span>
+          <span class="arc-node">Analytics / BI</span>
+          <span class="arc-arrow">→</span>
+          <span class="arc-node">Classical ML</span>
+          <span class="arc-arrow">→</span>
+          <span class="arc-node now">Applied ML + GenAI</span>
         </div>
       </div>
 
       <div class="about-facts reveal reveal-delay-2">
-        <div class="fact-row"><div class="fact-key">ROLE</div><div class="fact-val">Data Scientist / Operations Analyst</div></div>
-        <div class="fact-row"><div class="fact-key">LOCATION</div><div class="fact-val">Delhi, India (Remote / UK-facing)</div></div>
-        <div class="fact-row"><div class="fact-key">FOCUS</div><div class="fact-val">Predictive Modelling · Forecasting · ETL</div></div>
-        <div class="fact-row"><div class="fact-key">TOOLS</div><div class="fact-val">Python, SQL, Azure Databricks, Power BI</div></div>
+        <div class="fact-row"><div class="fact-key">ROLE</div><div class="fact-val">Data Scientist · GenAI &amp; Applied ML</div></div>
+        <div class="fact-row"><div class="fact-key">LOCATION</div><div class="fact-val">Delhi, India</div></div>
+        <div class="fact-row"><div class="fact-key">FOCUS</div><div class="fact-val">LLM Pipelines · MLOps · Forecasting</div></div>
+        <div class="fact-row"><div class="fact-key">STACK</div><div class="fact-val">Python · Azure · MLflow · FastAPI</div></div>
         <div class="fact-row"><div class="fact-key">EDUCATION</div><div class="fact-val">MSc Data Science (Distinction), Essex</div></div>
-        <div class="fact-row"><div class="fact-key">STATUS</div><div class="fact-val">Open to new roles</div></div>
+        <div class="fact-row"><div class="fact-key">TARGETING</div><div class="fact-val">Data Scientist · ML · MLOps · GenAI</div></div>
       </div>
     </div>
   </div>
@@ -578,53 +599,55 @@
     <div class="exp-timeline">
       <div class="exp-item reveal">
         <div class="exp-meta">
-          <div class="exp-period">Sep 2023 — Present</div>
+          <div class="exp-period">Sept 2023 — Jan 2026</div>
           <div class="exp-company">Call Assist Ltd</div>
-          <div class="exp-location">Colchester, UK</div>
+          <div class="exp-location">UK</div>
         </div>
         <div class="exp-content">
-          <div class="exp-role">Operations Analyst</div>
+          <div class="exp-role">Data Scientist</div>
+          <div class="exp-tagline">Applied ML + Generative AI · Production</div>
           <ul class="exp-bullets">
-            <li>Performed exploratory data analysis and statistical modelling on operational and financial datasets using Python and SQL, identifying cost drivers that <span class="exp-highlight">reduced service costs by 15–20%</span>.</li>
-            <li>Built predictive forecasting models for demand planning and recovery operations, <span class="exp-highlight">improving planning accuracy by 22%</span> through time-series analysis and regression techniques.</li>
-            <li>Applied feature engineering and hypothesis testing on CRM datasets to identify behavioural patterns, <span class="exp-highlight">improving response efficiency by 15%</span>.</li>
-            <li>Developed automated Python scripts for data validation and recurring analytical reports, <span class="exp-highlight">saving 10+ analyst hours per week</span>.</li>
-            <li>Designed KPI tracking dashboards in Power BI for cost, utilisation, and vendor performance, <span class="exp-highlight">improving management visibility by 40%</span>.</li>
-            <li>Engineered cloud-based ETL pipelines using Azure SQL to support scalable analytics and reporting automation.</li>
+            <li>Built and deployed an end-to-end <span class="exp-highlight">Generative AI pipeline</span> that transcribed call recordings via speech-to-text, summarised them through LLM APIs, and extracted intent, sentiment, and key case details — automating previously manual case review.</li>
+            <li>Used LLMs to generate recovery options, recommended actions, and decision outputs for agents, and integrated a <span class="exp-highlight">Microsoft Copilot chatbot</span> to surface those insights directly inside agent workflows.</li>
+            <li>Served ML and LLM pipeline outputs as REST APIs with <span class="exp-highlight">FastAPI</span>, tracked experiments and versioned models with <span class="exp-highlight">MLflow</span>, and automated testing and deployment through <span class="exp-highlight">GitHub Actions CI/CD</span> on Azure.</li>
+            <li>Built predictive forecasting models for demand and recovery operations, <span class="exp-highlight">improving planning accuracy by 22%</span>, and engineered Azure SQL and Databricks ETL pipelines that cut reporting turnaround by 35%.</li>
+            <li>Delivered Power BI KPI dashboards for cost, utilisation, and performance, and automated data validation and reporting — saving 10+ analyst hours per week at ~98% accuracy.</li>
           </ul>
         </div>
       </div>
 
       <div class="exp-item reveal reveal-delay-1">
         <div class="exp-meta">
-          <div class="exp-period">Mar 2024 — Jan 2025</div>
+          <div class="exp-period">Oct 2022 — Aug 2023</div>
           <div class="exp-company">System Engineering</div>
-          <div class="exp-location">London, UK · Contract</div>
+          <div class="exp-location">AI &amp; Data Consultancy · London, UK</div>
         </div>
         <div class="exp-content">
-          <div class="exp-role">Analytics Engineer</div>
+          <div class="exp-role">Junior Data Scientist (Part-time)</div>
+          <div class="exp-tagline">Classical ML · Held during the MSc</div>
           <ul class="exp-bullets">
-            <li>Built end-to-end data pipelines using Azure Databricks and SQL to process large datasets, <span class="exp-highlight">reducing reporting latency by 35%</span>.</li>
-            <li>Applied statistical analysis and trend evaluation to identify operational patterns supporting data-driven decision-making.</li>
-            <li>Designed Power BI dashboards translating complex statistical analyses into actionable insights, <span class="exp-highlight">improving stakeholder adoption by 40%</span>.</li>
-            <li>Collaborated with cross-functional stakeholders in Agile sprints to define metrics and validate analytical findings.</li>
+            <li>Contributed to a classification-based <span class="exp-highlight">product recommendation engine</span>, helping frame recommendations as a binary purchase-probability problem to support more personalised targeting.</li>
+            <li>Built and evaluated classical ML models in scikit-learn (Logistic Regression and tree-based ensembles such as Random Forest and XGBoost), supporting a baseline that improved on the legacy rule-based approach.</li>
+            <li>Engineered behavioural and transactional features from SQL data using Pandas and NumPy — handling missing-value imputation, skewed distributions, and categorical encoding.</li>
+            <li>Supported model evaluation under class imbalance using SMOTE and class weighting (tracking ROC-AUC and F1), and assisted the product team with A/B test analysis of recommendation impact on click-through rate.</li>
           </ul>
         </div>
       </div>
 
       <div class="exp-item reveal reveal-delay-2">
         <div class="exp-meta">
-          <div class="exp-period">Dec 2021 — Sep 2022</div>
+          <div class="exp-period">Dec 2021 — Sept 2022</div>
           <div class="exp-company">Cognizant Technology Solutions</div>
-          <div class="exp-location">Gurugram, India</div>
+          <div class="exp-location">India</div>
         </div>
         <div class="exp-content">
           <div class="exp-role">Associate Analyst</div>
+          <div class="exp-tagline">Enterprise analytics · Automation</div>
           <ul class="exp-bullets">
-            <li>Developed an Excel-based decision web app, <span class="exp-highlight">reducing policy evaluation time by 30%</span>.</li>
-            <li>Automated policy validation workflows achieving <span class="exp-highlight">99% data accuracy</span>, reducing manual errors.</li>
-            <li>Engineered KPI dashboards in Google Data Studio, accelerating performance monitoring.</li>
-            <li>Conducted A/B testing on ad placements, driving a <span class="exp-highlight">15–20% increase in conversion rates</span>.</li>
+            <li>Engineered data quality and validation pipelines for Google Ads content policy, processing <span class="exp-highlight">7,200+ monthly records at 99% accuracy</span> and resolving 100+ weekly extraction anomalies — achieving top-5 data accuracy across 30+ teams.</li>
+            <li>Automated policy validation workflows for a financial-services client using rule-based logic and structured data checks, eliminating manual review overhead and reducing data discrepancy rates by 30%.</li>
+            <li>Designed and deployed KPI dashboards in Google Data Studio and Google Sheets with automated data feeds, enabling real-time governance reporting across multiple business units.</li>
+            <li>Executed A/B testing frameworks driving <span class="exp-highlight">15–20% conversion uplift</span>, and built an Excel-based decision modelling tool that reduced policy evaluation time by 30%.</li>
           </ul>
         </div>
       </div>
@@ -633,14 +656,16 @@
         <div class="exp-meta">
           <div class="exp-period">Jan 2020 — Dec 2021</div>
           <div class="exp-company">Inletware Ltd</div>
-          <div class="exp-location">Gurugram, India · Part-Time</div>
+          <div class="exp-location">Part-time</div>
         </div>
         <div class="exp-content">
-          <div class="exp-role">Data Analyst</div>
+          <div class="exp-role">Data Analyst (Part-time)</div>
+          <div class="exp-tagline">Foundations · Pharma e-commerce data</div>
           <ul class="exp-bullets">
-            <li>Analysed pharmaceutical e-commerce datasets using SQL to extract business insights supporting market expansion.</li>
-            <li>Built 30+ dashboards in Power BI and Tableau to visualise sales, inventory, and demand trends, <span class="exp-highlight">improving reporting efficiency by 20%</span>.</li>
-            <li>Developed time-series forecasting models and predictive analytics workflows for demand planning and inventory optimisation.</li>
+            <li>Performed end-to-end analysis of pharmaceutical e-commerce data using SQL, cleaning and transforming raw transactional and inventory datasets to support demand planning and operational reporting.</li>
+            <li>Built time-series forecasting models to anticipate product demand and <span class="exp-highlight">reduce stockouts</span>, helping the team plan inventory more accurately across key product categories.</li>
+            <li>Designed and maintained <span class="exp-highlight">30+ Power BI and Tableau dashboards</span> tracking sales, inventory, and fulfilment metrics, improving reporting efficiency by ~20%.</li>
+            <li>Consolidated data from Azure SQL and internal sources into clean, analysis-ready tables, and automated recurring reports to replace manual spreadsheet preparation.</li>
           </ul>
         </div>
       </div>
@@ -652,41 +677,120 @@
 <section id="projects">
   <div class="container">
     <div class="section-label reveal"><span class="idx">03</span> Selected work</div>
-    <h2 class="section-title reveal">Projects</h2>
+    <h2 class="section-title reveal">ML &amp; Data Science Projects</h2>
 
     <!-- PROJECT 1 -->
     <div class="project-card reveal">
       <div class="project-card-header">
         <div>
-          <div class="project-tag">NLP · Clinical Prediction</div>
-          <h3 class="project-title">Gout Prediction Using NLP</h3>
+          <div class="project-tag">Generative AI · MLOps · Production</div>
+          <h3 class="project-title">Generative AI Call Analytics Pipeline</h3>
           <p class="project-problem">
-            Clinical gout diagnosis relies heavily on subjective symptom descriptions in free-text
-            patient records. This project applies NLP to extract structured clinical signals from
-            unstructured text and trains a model to flag gout risk — reducing dependence on manual
-            interpretation.
+            Manual case review of recovery calls was slow and inconsistent. This production pipeline
+            automates it end-to-end — transcription, LLM-based summarisation, sentiment-driven
+            analysis, and automated action generation — freeing agents to act on insights instead
+            of transcripts.
           </p>
         </div>
-        <div class="status-badge"><span class="status-dot"></span> Productionising</div>
+        <div class="status-badge"><span class="status-dot live"></span> Production</div>
       </div>
       <div class="project-card-body">
         <div>
           <div class="project-section-label">Approach</div>
-          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
-            Text preprocessing (tokenisation, stopword removal, entity normalisation) → TF-IDF /
-            n-gram feature extraction → classification pipeline (Logistic Regression / Random
-            Forest) → evaluation via precision, recall, F1, and AUC-ROC.
+          <p class="project-approach">
+            Speech-to-text transcription → LLM API summarisation and intent/sentiment extraction →
+            automated recovery-option and action generation. Served via FastAPI on Azure with MLflow
+            experiment tracking and GitHub Actions CI/CD.
+          </p>
+        </div>
+        <div>
+          <div class="project-section-label">Stack</div>
+          <div class="stack-tags">
+            <span class="stack-tag">LLM APIs</span>
+            <span class="stack-tag">Azure OpenAI</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">MLflow</span>
+            <span class="stack-tag">GitHub Actions</span>
+            <span class="stack-tag">Speech-to-Text</span>
+            <span class="stack-tag">Python</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-link">Proprietary · deployed at Call Assist Ltd</span>
+        <span class="roadmap-note">Enterprise production system</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-card-header">
+        <div>
+          <div class="project-tag">ML · Cheminformatics</div>
+          <h3 class="project-title">Anticancer Molecule Activity Prediction</h3>
+          <p class="project-problem">
+            Screening molecules for anticancer activity by hand is expensive and slow. This
+            classification pipeline predicts activity directly from molecular structure, using
+            descriptors and fingerprints to prioritise promising candidates.
+          </p>
+        </div>
+        <div class="status-badge"><span class="status-dot"></span> Research</div>
+      </div>
+      <div class="project-card-body">
+        <div>
+          <div class="project-section-label">Approach</div>
+          <p class="project-approach">
+            Molecular descriptor and fingerprint generation with RDKit → feature selection →
+            classification via scikit-learn ensemble methods, validated with cross-validation to
+            keep results honest on unseen molecules.
           </p>
         </div>
         <div>
           <div class="project-section-label">Stack</div>
           <div class="stack-tags">
             <span class="stack-tag">Python</span>
-            <span class="stack-tag">NLTK</span>
-            <span class="stack-tag">spaCy</span>
             <span class="stack-tag">Scikit-learn</span>
-            <span class="stack-tag">Pandas</span>
-            <span class="stack-tag">Jupyter</span>
+            <span class="stack-tag">RDKit</span>
+            <span class="stack-tag">Feature Engineering</span>
+            <span class="stack-tag">Ensemble Methods</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-link">MSc / life-sciences ML project</span>
+        <span class="roadmap-note">Pharma × data bridge</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-card-header">
+        <div>
+          <div class="project-tag">NLP · Clinical Text</div>
+          <h3 class="project-title">Gout Disease NLP Classification</h3>
+          <p class="project-problem">
+            Clinical signals for gout are buried in free-text notes. This NLP pipeline classifies
+            gout-related clinical text to surface structured risk signals from unstructured records.
+          </p>
+        </div>
+        <div class="status-badge"><span class="status-dot live"></span> Live · GitHub</div>
+      </div>
+      <div class="project-card-body">
+        <div>
+          <div class="project-section-label">Approach</div>
+          <p class="project-approach">
+            Text preprocessing → TF-IDF vectorisation → supervised classification with scikit-learn,
+            tuned via hyperparameter search and assessed with precision, recall, and F1.
+          </p>
+        </div>
+        <div>
+          <div class="project-section-label">Stack</div>
+          <div class="stack-tags">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">NLP</span>
+            <span class="stack-tag">TF-IDF</span>
+            <span class="stack-tag">Scikit-learn</span>
+            <span class="stack-tag">Hyperparameter Tuning</span>
           </div>
         </div>
       </div>
@@ -699,84 +803,42 @@
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="project-card reveal reveal-delay-1">
+    <!-- PROJECT 4 -->
+    <div class="project-card reveal reveal-delay-3">
       <div class="project-card-header">
         <div>
-          <div class="project-tag">Bioinformatics · Python App</div>
-          <h3 class="project-title">DNA Sequence Analysis & Visualisation Platform</h3>
+          <div class="project-tag">Time Series · Forecasting</div>
+          <h3 class="project-title">Demand Forecasting &amp; Inventory Optimisation</h3>
           <p class="project-problem">
-            Bioinformatics researchers lacked a fast, accessible tool for computing and visualising
-            key sequence metrics — length distributions, GC content, compositional profiles —
-            without writing custom scripts for each dataset.
+            Reactive inventory planning on pharmaceutical e-commerce data led to avoidable stockouts.
+            These forecasting models anticipate demand ahead of time so inventory is planned, not
+            patched.
           </p>
         </div>
-        <div class="status-badge"><span class="status-dot"></span> Live</div>
+        <div class="status-badge"><span class="status-dot"></span> Delivered</div>
       </div>
       <div class="project-card-body">
         <div>
           <div class="project-section-label">Approach</div>
-          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
-            FASTA/sequence file upload and parsing → sequence metrics engine (length, GC content,
-            nucleotide frequency) → interactive in-browser visualisation via a lightweight Python
-            web app.
+          <p class="project-approach">
+            SQL-based data preparation on transactional and inventory data → time-series forecasting
+            models per product category → results surfaced through Power BI for planning and
+            stockout reduction.
           </p>
         </div>
         <div>
           <div class="project-section-label">Stack</div>
           <div class="stack-tags">
             <span class="stack-tag">Python</span>
-            <span class="stack-tag">BioPython</span>
-            <span class="stack-tag">Pandas</span>
-            <span class="stack-tag">Matplotlib</span>
-            <span class="stack-tag">Streamlit</span>
+            <span class="stack-tag">Time-Series Models</span>
+            <span class="stack-tag">SQL</span>
+            <span class="stack-tag">Power BI</span>
           </div>
         </div>
       </div>
       <div class="project-card-footer">
-        <a href="https://github.com/mohdumarharis/DNA_sequencing" class="project-link" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          View on GitHub
-        </a>
-        <span class="roadmap-note">github.com/mohdumarharis</span>
-      </div>
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-card reveal reveal-delay-2">
-      <div class="project-card-header">
-        <div>
-          <div class="project-tag">Time Series · Forecasting · Enterprise</div>
-          <h3 class="project-title">Demand Forecasting for Recovery Operations</h3>
-          <p class="project-problem">
-            Recovery operations at Call Assist relied on manual demand estimation — planners
-            reacted to shortfalls rather than anticipating them, leading to inefficient vendor
-            allocation and avoidable costs.
-          </p>
-        </div>
-        <div class="status-badge"><span class="status-dot"></span> Production</div>
-      </div>
-      <div class="project-card-body">
-        <div>
-          <div class="project-section-label">Approach</div>
-          <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7;font-weight:300;">
-            Historical operational data ETL (Python + Azure SQL) → lag / rolling-average / seasonality
-            feature engineering → time-series regression forecasting → Power BI dashboard with a
-            7-day rolling prediction window for the operations team.
-          </p>
-        </div>
-        <div>
-          <div class="project-section-label">Measured Outcomes</div>
-          <div class="metric-list">
-            <div class="metric-item"><span class="m-num">+22%</span> Planning accuracy improvement</div>
-            <div class="metric-item"><span class="m-num">−18%</span> Service cost reduction</div>
-            <div class="metric-item"><span class="m-num">+40%</span> Management visibility (KPI dashboards)</div>
-          </div>
-        </div>
-      </div>
-      <div class="project-card-footer">
-        <span class="project-link">Code available on request</span>
-        <span class="roadmap-note">Call Assist Ltd · UK</span>
+        <span class="project-link">Applied on pharma e-commerce data</span>
+        <span class="roadmap-note">Planning &amp; inventory</span>
       </div>
     </div>
   </div>
@@ -790,47 +852,47 @@
 
     <div class="skills-grid reveal reveal-delay-1">
       <div class="skill-group">
-        <div class="skill-group-label">Programming & Data</div>
+        <div class="skill-group-label">Generative AI &amp; LLMs</div>
         <ul class="skill-list">
-          <li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li>
-          <li>SQL (PostgreSQL, MySQL)</li><li>R (academic)</li>
+          <li>LLM API Integration</li><li>Prompt Engineering</li><li>Azure OpenAI</li>
+          <li>Text Summarisation Pipelines</li><li>Copilot Integration</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Machine Learning</div>
+        <div class="skill-group-label">ML &amp; Statistics</div>
         <ul class="skill-list">
           <li>Predictive Modelling</li><li>Classification</li><li>Regression</li>
-          <li>Feature Engineering</li><li>Hyperparameter Tuning</li>
-          <li>Cross-Validation</li><li>Time Series Analysis</li>
-          <li>NLP (academic)</li><li>TensorFlow (projects)</li>
+          <li>Time Series Forecasting</li><li>NLP</li><li>Feature Engineering</li>
+          <li>A/B Testing</li><li>Hypothesis Testing</li><li>Model Evaluation</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Statistics</div>
+        <div class="skill-group-label">MLOps &amp; Deployment</div>
         <ul class="skill-list">
-          <li>Exploratory Data Analysis</li><li>Hypothesis Testing</li>
-          <li>A/B Testing</li><li>Statistical Modelling</li><li>Forecasting</li>
+          <li>MLflow</li><li>FastAPI</li><li>GitHub Actions (CI/CD)</li>
+          <li>Azure ML</li><li>Docker</li><li>Model Versioning</li><li>REST API Deployment</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Data Engineering</div>
+        <div class="skill-group-label">Programming &amp; Analysis</div>
         <ul class="skill-list">
-          <li>Azure Databricks</li><li>ETL Pipelines</li>
-          <li>Data Warehousing</li><li>Azure SQL</li>
+          <li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li>
+          <li>SQL (PostgreSQL, MySQL)</li><li>R</li>
         </ul>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Visualisation & Reporting</div>
+        <div class="skill-group-label">Cloud &amp; Data Engineering</div>
+        <ul class="skill-list">
+          <li>Azure Databricks</li><li>Azure Data Factory</li>
+          <li>Azure SQL</li><li>ETL Pipelines</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">BI, Viz &amp; Practices</div>
         <ul class="skill-list">
           <li>Power BI</li><li>Tableau</li><li>Google Data Studio</li>
-          <li>Data Storytelling</li><li>Dashboard Design</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Practices</div>
-        <ul class="skill-list">
-          <li>Agile / Scrum</li><li>Stakeholder Communication</li>
-          <li>Cross-Functional Collaboration</li><li>Git / GitHub</li>
+          <li>Agile (Scrum)</li><li>Stakeholder Management</li>
+          <li>Cross-functional Collaboration</li><li>Model Validation</li>
         </ul>
       </div>
     </div>
@@ -841,7 +903,7 @@
 <section id="education">
   <div class="container">
     <div class="section-label reveal"><span class="idx">05</span> Education</div>
-    <h2 class="section-title reveal">Education & Certifications</h2>
+    <h2 class="section-title reveal">Education</h2>
     <div class="edu-grid reveal reveal-delay-1">
       <div class="edu-card">
         <div class="edu-degree">MSc Data Science and its Applications</div>
@@ -850,13 +912,13 @@
         <div class="edu-distinction">Distinction</div>
       </div>
       <div class="edu-card">
-        <div class="edu-degree">Bachelor of Pharmacy</div>
+        <div class="edu-degree">Bachelor of Pharmacy (B.Pharm)</div>
         <div class="edu-school">Jamia Hamdard University, India</div>
         <div class="edu-year">2017 – 2021</div>
-        <div class="edu-distinction">First Class / 2:1 Equivalent</div>
-        <div class="cert-list">
-          <div class="cert-item">Microsoft Certified: Power BI Data Analyst Associate</div>
-          <div class="cert-item">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
+        <div class="edu-distinction">First Class</div>
+        <div class="edu-note">
+          A life-sciences foundation that carries into healthcare and pharma data work —
+          from clinical NLP to molecular activity prediction and demand forecasting.
         </div>
       </div>
     </div>
@@ -869,17 +931,21 @@
     <div class="contact-grid">
       <div class="contact-left reveal">
         <div class="section-label"><span class="idx">06</span> Get in touch</div>
-        <h2 class="section-title">Let's build something<br>data-driven.</h2>
+        <h2 class="section-title">Let's build something<br>with data.</h2>
         <p>
-          Open to Data Scientist / ML Engineer roles where statistical rigor and
-          business impact both matter — insurance, logistics, healthcare, and
-          enterprise SaaS all of interest.
+          Open to Data Scientist, ML Engineer, MLOps, and GenAI roles where statistical rigor,
+          deployment quality, and business impact all matter — insurance, logistics, healthcare,
+          and enterprise SaaS all of interest.
         </p>
 
         <div class="contact-info-list">
           <div class="contact-info-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="#" id="emailLink">— loading —</a>
+          </div>
+          <div class="contact-info-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="#" id="phoneLink">— loading —</a>
           </div>
           <div class="contact-info-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -965,14 +1031,14 @@
       });
     }
 
-    // Lightweight email de-obfuscation (avoids plain-text scraping)
-    const emailParts = ['mohdomarharis', 'gmail.com'];
+    // Lightweight contact de-obfuscation (avoids plain-text scraping)
+    const emailAddr = ['mohdomarharis', 'gmail.com'].join('@');
     const emailLink = document.getElementById('emailLink');
-    if (emailLink) {
-      const addr = emailParts.join('@');
-      emailLink.href = 'mailto:' + addr;
-      emailLink.textContent = addr;
-    }
+    if (emailLink) { emailLink.href = 'mailto:' + emailAddr; emailLink.textContent = emailAddr; }
+
+    const phoneDigits = '+91 8447582440';
+    const phoneLink = document.getElementById('phoneLink');
+    if (phoneLink) { phoneLink.href = 'tel:' + phoneDigits.replace(/\s/g, ''); phoneLink.textContent = phoneDigits; }
 
     // Contact form (EmailJS)
     const EMAILJS_PUBLIC_KEY  = 'ZhiXrXD1EFUU0rlhH';
