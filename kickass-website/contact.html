@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NEXUS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <h1 class="loader-text">NEXUS</h1>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">NEXUS</span>
+                <div class="logo-glow"></div>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-bg">
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="container">
+            <h1 class="page-title">Get In <span class="highlight">Touch</span></h1>
+            <p class="page-subtitle">Let's create something amazing together</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Let's Talk About Your Project</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Visit Us</h4>
+                                <p>123 Innovation Street, Tech City, TC 12345</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-text">
+                                <h4>Email Us</h4>
+                                <p>hello@nexus.digital</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div class="info-text">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">⏰</div>
+                            <div class="info-text">
+                                <h4>Working Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div style="margin-top: 40px;">
+                            <h4 style="font-family: var(--font-heading); margin-bottom: 20px; font-size: 1.2rem;">Follow Us</h4>
+                            <div class="footer-social">
+                                <a href="#" class="social-link">TW</a>
+                                <a href="#" class="social-link">IG</a>
+                                <a href="#" class="social-link">LI</a>
+                                <a href="#" class="social-link">GH</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                                <span style="margin-left: 10px;">→</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section (Visual Placeholder) -->
+        <section class="map-section" style="height: 400px; background: var(--bg-dark); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 243, 255, 0.05), rgba(189, 0, 255, 0.05));">
+                <div class="grid-overlay" style="animation-duration: 30s;"></div>
+            </div>
+            <div style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 20px;">🗺️</div>
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 10px;">Find Us Here</h3>
+                <p style="color: var(--text-secondary);">123 Innovation Street, Tech City, TC 12345</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" style="padding: 120px 0; background: var(--bg-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+                    <p class="section-subtitle">Got questions? We've got answers</p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item" style="background: var(--bg-dark); padding: 30px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(0, 243, 255, 0.1); transition: all 0.3s ease; cursor: pointer;" onclick="this.classList.toggle('active')">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>What's your typical project timeline?</span>
+                            <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.8; display: none;">Project timelines vary depending on scope and complexity. A typical website project takes 4-8 weeks, while more complex applications may take 3-6 months. We'll provide a detailed timeline during our initial consultation.</p>
+                    </div>
+
+                    <div class="faq-item" style="background: var(--bg-dark); padding: 30px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(0, 243, 255, 0.1); transition: all 0.3s ease; cursor: pointer;" onclick="this.classList.toggle('active')">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>How do you handle project pricing?</span>
+                            <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.8; display: none;">We offer both fixed-price and time-and-materials pricing models. After understanding your requirements, we'll provide a detailed quote with no hidden fees. We believe in transparent pricing throughout the entire process.</p>
+                    </div>
+
+                    <div class="faq-item" style="background: var(--bg-dark); padding: 30px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(0, 243, 255, 0.1); transition: all 0.3s ease; cursor: pointer;" onclick="this.classList.toggle('active')">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Do you provide ongoing support?</span>
+                            <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.8; display: none;">Absolutely! We offer various support and maintenance packages to ensure your digital products remain secure, updated, and performing optimally. We're committed to long-term partnerships with our clients.</p>
+                    </div>
+
+                    <div class="faq-item" style="background: var(--bg-dark); padding: 30px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(0, 243, 255, 0.1); transition: all 0.3s ease; cursor: pointer;" onclick="this.classList.toggle('active')">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Can you work with our existing team?</span>
+                            <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
+                        </h4>
+                        <p style="color: var(--text-secondary); line-height: 1.8; display: none;">Yes! We frequently collaborate with in-house teams, other agencies, and freelancers. We're flexible and can adapt to your workflow and communication preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NEXUS</h3>
+                    <p>Creating digital experiences that inspire and innovate</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">LI</a>
+                    <a href="#" class="social-link">GH</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NEXUS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Show success message (in real implementation, this would send to server)
+            alert(`Thank you ${name}! Your message has been received. We'll get back to you at ${email} soon!`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // FAQ Toggle Enhancement
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const answer = this.querySelector('p');
+                const icon = this.querySelector('h4 span:last-child');
+                
+                if (this.classList.contains('active')) {
+                    answer.style.display = 'block';
+                    icon.textContent = '−';
+                } else {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
