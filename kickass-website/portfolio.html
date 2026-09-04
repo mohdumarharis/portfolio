@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - NEXUS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <h1 class="loader-text">NEXUS</h1>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">NEXUS</span>
+                <div class="logo-glow"></div>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-bg">
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="container">
+            <h1 class="page-title">Our <span class="highlight">Work</span></h1>
+            <p class="page-subtitle">Showcasing our finest digital creations</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Portfolio Filters -->
+        <section class="portfolio-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                    <button class="filter-btn" data-filter="3d">3D & Animation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section class="portfolio-gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Project 1 -->
+                    <div class="gallery-item" data-category="web">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>CyberTech Website</h3>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="gallery-item" data-category="3d">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>Neon Dreams</h3>
+                            <p>3D Animation</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="gallery-item" data-category="app">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>FitTrack Pro</h3>
+                            <p>Mobile App</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="gallery-item" data-category="branding">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>Pulse Brand Identity</h3>
+                            <p>Branding</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="gallery-item" data-category="web">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>E-Commerce Platform</h3>
+                            <p>Web Development</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="gallery-item" data-category="3d">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>Virtual Showroom</h3>
+                            <p>VR Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="gallery-item" data-category="app">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>MediCare Plus</h3>
+                            <p>Healthcare App</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="gallery-item" data-category="branding">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>Quantum Logo</h3>
+                            <p>Brand Design</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="gallery-item" data-category="web">
+                        <div class="gallery-image"></div>
+                        <div class="gallery-overlay">
+                            <h3>AI Dashboard</h3>
+                            <p>Web Application</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="padding: 120px 0; background: var(--bg-light); text-align: center;">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom: 30px;">Want to See <span class="highlight">More?</span></h2>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px; line-height: 2;">We're constantly working on exciting new projects. Get in touch to learn more about our capabilities.</p>
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NEXUS</h3>
+                    <p>Creating digital experiences that inspire and innovate</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">LI</a>
+                    <a href="#" class="social-link">GH</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NEXUS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Portfolio Filter Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
