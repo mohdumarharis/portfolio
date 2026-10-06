@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f2ec">
-  <meta name="description" content="Explore applied AI, molecular activity prediction, clinical NLP and demand forecasting projects by Umar Haris.">
+  <meta name="description" content="Six projects by Umar Haris: production AI, an advanced RAG app, a personal insurance claim verification agent, molecular ML, clinical NLP and forecasting.">
   <meta property="og:title" content="Selected work — Umar Haris">
-  <meta property="og:description" content="Explore applied AI, molecular activity prediction, clinical NLP and demand forecasting projects by Umar Haris.">
+  <meta property="og:description" content="Six projects by Umar Haris: production AI, an advanced RAG app, a personal insurance claim verification agent, molecular ML, clinical NLP and forecasting.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.umarharis.com/work.html">
   <title>Selected work — Umar Haris</title>
@@ -28,6 +28,14 @@
 <main id="main">
 <section class="work-section wrap section inner-page" id="work" aria-labelledby="work-heading">
       <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h1 id="work-heading">The work, in context.</h1></div><p>Real problems. Different methods.<br> A practical reason for every model.</p></div>
+      <nav class="project-index" aria-label="Jump to a project">
+        <a href="#call-analytics"><span>01</span> Call intelligence</a>
+        <a href="#advanced-rag"><span>02</span> Advanced RAG</a>
+        <a href="#insurance-agent"><span>03</span> Insurance agent</a>
+        <a href="#molecular-activity"><span>04</span> Molecular ML</a>
+        <a href="#clinical-nlp"><span>05</span> Clinical NLP</a>
+        <a href="#demand-forecasting"><span>06</span> Forecasting</a>
+      </nav>
       <article id="call-analytics" class="featured-project" aria-labelledby="call-title">
         <div class="project-copy">
           <div class="project-meta"><span>01 — APPLIED AI</span><span class="project-status"><i class="status-dot" aria-hidden="true"></i> IN PRODUCTION</span></div>
@@ -52,9 +60,71 @@
         </div>
       </article>
 
+      <article id="advanced-rag" class="featured-project personal-project" aria-labelledby="rag-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>02 — ADVANCED RAG APP</span><span>PERSONAL PROJECT</span></div>
+          <h2 id="rag-title">Ask your documents.<br> Inspect the evidence.</h2>
+          <p>A document question-answering app that makes retrieval visible. Ask about PDFs, slide decks or notes, then inspect the source passages, reranker scores and retrieval stages behind the answer.</p>
+          <dl class="project-context"><div><dt>RETRIEVAL</dt><dd>Dense search + BM25, rank fusion and cross-encoder reranking</dd></div><div><dt>EVALUATION</dt><dd>Stage-by-stage recall, MRR and answer / abstention checks</dd></div></dl>
+          <div class="tool-line">Python / LangChain / Chroma / BM25 / Sentence Transformers / Azure OpenAI</div>
+          <a class="project-repo" href="https://github.com/mohdumarharis/advanced-rag-app" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+          <details class="project-detail"><summary>Read the engineering notes <span aria-hidden="true">＋</span></summary><div class="detail-body">
+            <h3>Two ways to find the evidence</h3><p>Dense retrieval captures semantic similarity; BM25 catches exact terms. Reciprocal Rank Fusion combines the rankings, and a cross-encoder reranks the pooled passages against the question before Azure OpenAI generates an answer from the selected context.</p>
+            <h3>An index that remembers what changed</h3><p>A content-hashed file manifest and stable chunk IDs allow incremental indexing: changed files are reprocessed, deleted files are removed, and unchanged documents stay indexed.</p>
+            <h3>Measure each stage</h3><p>The evaluation harness compares dense, sparse, fused and reranked retrieval against a golden set. Saved baselines make changes to chunking and retrieval measurable; answer checks also include questions the documents cannot answer.</p>
+            <p>In the checked-in reference run, reranking improved recall over fusion, while BM25 alone outperformed dense retrieval. Those results guide the next iteration rather than becoming a general accuracy claim.</p>
+            <p class="disclosure">Personal project with a terminal interface. Reranker scores are visible but do not yet filter out weak matches; abstention is instructed in the answer prompt. Evaluation results apply to the reference corpus.</p>
+          </div></details>
+        </div>
+        <figure class="system-panel retrieval-panel" aria-labelledby="rag-figure-title">
+          <div class="panel-heading"><span class="eyebrow" id="rag-figure-title">FOLLOW THE EVIDENCE</span><span class="eyebrow">02 / RAG</span></div>
+          <div class="retrieval-map">
+            <p class="map-input">YOUR QUESTION + INDEXED DOCUMENTS</p>
+            <div class="map-arrow" aria-hidden="true">↓</div>
+            <div class="retrieval-branches"><div><span class="map-step">A / SEMANTIC</span><strong>Dense search</strong><small>Chroma + embeddings</small></div><div><span class="map-step">B / EXACT TERMS</span><strong>BM25</strong><small>Keyword retrieval</small></div></div>
+            <div class="merge-lines" aria-hidden="true"></div>
+            <div class="map-node"><span class="map-step">COMBINE</span><strong>Reciprocal Rank Fusion</strong></div>
+            <div class="map-arrow" aria-hidden="true">↓</div>
+            <div class="map-node rerank-node"><span class="map-step">RERANK</span><strong>Question × passage</strong><small>Cross-encoder relevance scores</small></div>
+            <div class="map-arrow" aria-hidden="true">↓</div>
+            <div class="map-result"><strong>An answer with its sources</strong><span>Inspect passages · Compare retrieval stages</span></div>
+          </div>
+          <figcaption class="system-caption">Conceptual workflow · Source code and evaluation in the repository</figcaption>
+        </figure>
+      </article>
+
+      <article id="insurance-agent" class="featured-project personal-project insurance-project" aria-labelledby="insurance-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>03 — AGENTIC AI</span><span>PERSONAL PROJECT</span></div>
+          <h2 id="insurance-title">Verify the claim.<br> Keep people in control.</h2>
+          <p class="project-name">AI Insurance Claim Verification Agent</p>
+          <p>A multi-agent system that ingests a claim, checks it against policy documents and flags inconsistencies. Deterministic checks and human review gates govern the outcome.</p>
+          <dl class="project-context"><div><dt>AGENTS</dt><dd>Document parsing, policy verification and fraud triage</dd></div><div><dt>REVIEW</dt><dd>Low-confidence and high-value claims go to a human reviewer</dd></div></dl>
+          <div class="tool-line">LangGraph / Azure OpenAI (direct API) / FastAPI / Python / Pydantic / Docker</div>
+          <details class="project-detail"><summary>Read the system design <span aria-hidden="true">＋</span></summary><div class="detail-body">
+            <h3>A defined graph of responsibilities</h3><p>LangGraph coordinates specialised agents through explicit state transitions. Document parsing, policy verification and fraud triage each have a defined role in the claim verification workflow.</p>
+            <h3>Rules govern; language models assist</h3><p>The decision core uses deterministic, auditable rules. LLMs extract information, compare it with policy evidence and generate explanations. Pydantic validates the structured data passed through the system.</p>
+            <h3>Evidence before a decision</h3><p>PII is masked before LLM calls. Grounding checks compare generated claims against source policy documents, and the system refuses to decide when evidence is insufficient.</p>
+            <h3>A useful handoff to a reviewer</h3><p>Confidence-based routing sends uncertain or high-value cases to a review queue with a structured summary of completed checks, unresolved questions and supporting evidence. A claim can only clear through a deterministic check or a human gate.</p>
+            <p class="disclosure">Personal demonstration project. The diagram describes the design; it shows no real claims or policyholder data.</p>
+          </div></details>
+        </div>
+        <figure class="system-panel insurance-panel" aria-labelledby="insurance-figure-title">
+          <div class="panel-heading"><span class="eyebrow" id="insurance-figure-title">A CHECK AT EVERY STEP</span><span class="eyebrow">03 / AGENTS</span></div>
+          <div class="claims-map">
+            <div class="claim-input"><span class="map-step">CLAIM + POLICY DOCUMENTS</span><strong>Mask personal information</strong><small>Before any LLM call</small></div>
+            <ol class="agent-stages"><li><span>01</span><div><strong>Parse documents</strong><small>Extract &amp; validate structured details</small></div></li><li><span>02</span><div><strong>Verify the policy</strong><small>Cross-check details against source evidence</small></div></li><li><span>03</span><div><strong>Triage inconsistencies</strong><small>Flag risk and unresolved questions</small></div></li></ol>
+            <div class="decision-gate"><span class="map-step">DETERMINISTIC CHECKS + CONFIDENCE GATE</span><strong>Is the evidence sufficient?</strong></div>
+            <div class="review-routes"><div><span class="map-step">CHECKS PASSED</span><strong>Traceable outcome</strong></div><div><span class="map-step">UNCERTAIN / HIGH VALUE</span><strong>Human review</strong></div></div>
+            <p class="withhold-note">Insufficient evidence → withhold the decision.</p>
+          </div>
+          <figcaption class="system-caption">Conceptual workflow · Personal project</figcaption>
+        </figure>
+      </article>
+
       <div class="project-pair">
         <article id="molecular-activity" class="folio-project molecule-project">
-          <div class="project-meta"><span>02 — LIFE SCIENCES × ML</span><span>RESEARCH</span></div>
+          <div class="project-meta"><span>04 — LIFE SCIENCES × ML</span><span>RESEARCH</span></div>
           <div class="project-illustration molecule-illustration" role="img" aria-label="Conceptual diagram showing molecular structure converted to descriptors and an activity classifier">
             <svg viewBox="0 0 520 250" aria-hidden="true"><g stroke="#4c6058" stroke-width="1.4" fill="none"><path d="M65 83l37-21 37 21v43l-37 22-37-22Zm74 0 37-21 37 21v43l-37 22-37-22M73 88v33m29 18 28-17m-28-51 28 16M176 71l28 16m0 6v28m-57 10 29 16M65 83 43 70m59 78v28m111-93 25-14M213 126l22 13"/><path stroke-dasharray="3 5" d="M259 109h43m-7-4 7 4-7 4M410 109h42m-7-4 7 4-7 4"/></g><g fill="#bd3d27" font-family="monospace" font-size="15"><text x="27" y="72">N</text><text x="94" y="196">OH</text><text x="240" y="69">O</text><text x="239" y="147">N</text></g><g fill="#638170"><rect x="323" y="75" width="8" height="8"/><rect x="341" y="75" width="8" height="8" opacity=".4"/><rect x="359" y="75" width="8" height="8"/><rect x="377" y="75" width="8" height="8" opacity=".3"/><rect x="323" y="93" width="8" height="8" opacity=".3"/><rect x="341" y="93" width="8" height="8"/><rect x="359" y="93" width="8" height="8" opacity=".5"/><rect x="377" y="93" width="8" height="8"/><rect x="323" y="111" width="8" height="8"/><rect x="341" y="111" width="8" height="8" opacity=".2"/><rect x="359" y="111" width="8" height="8"/><rect x="377" y="111" width="8" height="8" opacity=".5"/><rect x="323" y="129" width="8" height="8" opacity=".4"/><rect x="341" y="129" width="8" height="8"/><rect x="359" y="129" width="8" height="8" opacity=".3"/><rect x="377" y="129" width="8" height="8"/></g><circle cx="473" cy="109" r="15" fill="none" stroke="#bd3d27" stroke-width="1.5"/><circle cx="473" cy="109" r="4" fill="#bd3d27"/><g font-family="monospace" font-size="9.5" fill="#626b61"><text x="67" y="229">STRUCTURE</text><text x="317" y="180">DESCRIPTORS</text><text x="444" y="180">CLASSIFY</text></g></svg>
             <span class="illustration-caption">MOLECULAR ACTIVITY / CONCEPTUAL WORKFLOW</span>
@@ -65,7 +135,7 @@
           <details class="project-detail"><summary>Explore the approach <span aria-hidden="true">＋</span></summary><div class="detail-body"><p>RDKit generates molecular descriptors and fingerprints. Feature selection prepares the inputs for ensemble classifiers, assessed with cross-validation on unseen molecules.</p><p>This MSc / life-sciences project explores how structure-based models can help prioritise candidates for further investigation.</p><p class="disclosure">Research project. The visual is a schematic, not a molecular result or a validated clinical claim.</p></div></details>
         </article>
         <article id="clinical-nlp" class="folio-project clinical-project">
-          <div class="project-meta"><span>03 — CLINICAL NLP</span><span>CODE ON GITHUB</span></div>
+          <div class="project-meta"><span>05 — CLINICAL NLP</span><span>CODE ON GITHUB</span></div>
           <div class="project-illustration clinical-illustration">
             <span class="illustration-index">TEXT → FEATURES → CLASSIFICATION</span>
             <div class="text-fragment" aria-hidden="true"><span>Clinical text</span><i></i><i class="short"></i><div><b>language</b><i></i></div><i></i><div><i class="short"></i><b>patterns</b></div></div>
@@ -81,7 +151,7 @@
       </div>
 
       <article id="demand-forecasting" class="forecast-project">
-        <div><p class="eyebrow">04 — FORECASTING &amp; OPERATIONS</p><h2>Planning ahead<br> of demand.</h2></div>
+        <div><p class="eyebrow">06 — FORECASTING &amp; OPERATIONS</p><h2>Planning ahead<br> of demand.</h2></div>
         <div class="forecast-content"><p>Time-series forecasting on pharmaceutical e-commerce data to support inventory planning and reduce stockouts. Clean SQL data in; planning insights through Power BI out.</p><div class="tool-line">Python / Time series / SQL / Power BI</div><details class="project-detail"><summary>Read the project notes <span aria-hidden="true">＋</span></summary><div class="detail-body"><p>Transactional and inventory data is cleaned in SQL, then used to build demand forecasts by product category. Results are surfaced in Power BI to make planning easier for operational teams.</p><p>Applied at Inletware, alongside dashboards for sales, inventory and fulfilment.</p></div></details></div>
         <div class="forecast-flow" aria-label="Forecasting workflow"><span>PAST DEMAND</span><span class="forecast-spark" aria-hidden="true">▁▃▂▅▃▆▄▇▅</span><span class="forecast-arrow" aria-hidden="true">↓</span><span>BETTER PLANNING</span></div>
       </article>
