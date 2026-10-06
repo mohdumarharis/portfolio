@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta name="description" content="Explore applied AI, molecular activity prediction, clinical NLP and demand forecasting projects by Umar Haris.">
+  <meta property="og:title" content="Selected work — Umar Haris">
+  <meta property="og:description" content="Explore applied AI, molecular activity prediction, clinical NLP and demand forecasting projects by Umar Haris.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.umarharis.com/work.html">
+  <title>Selected work — Umar Haris</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <script src="app.js" defer></script>
+  <noscript><style>.menu-toggle{display:none!important}.header{height:auto;min-height:100px;flex-wrap:wrap;padding-block:16px;gap:15px}.header nav{display:flex;position:static;flex-wrap:wrap;gap:16px;padding:0;border:0;background:transparent}.header nav a{font-size:12px}.stage-selector{display:none}</style></noscript>
+<link rel="canonical" href="https://www.umarharis.com/work.html">
+</head>
+<body data-page="work.html">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header wrap" id="site-top">
+  <a class="identity" href="index.html" aria-label="Umar Haris, home"><span class="monogram" aria-hidden="true">uh.</span><span>Umar Haris<span class="identity-sub">DATA SCIENTIST</span></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">＋</span></button>
+  <nav id="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="work.html" aria-current="page">Selected work</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="contact.html" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main id="main">
+<section class="work-section wrap section inner-page" id="work" aria-labelledby="work-heading">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h1 id="work-heading">The work, in context.</h1></div><p>Real problems. Different methods.<br> A practical reason for every model.</p></div>
+      <article id="call-analytics" class="featured-project" aria-labelledby="call-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>01 — APPLIED AI</span><span class="project-status"><i class="status-dot" aria-hidden="true"></i> IN PRODUCTION</span></div>
+          <h2 id="call-title">A recovery call.<br> A clearer next step.</h2>
+          <p>Turning call recordings into summaries, case details and recommended actions, so recovery agents can get to the information they need.</p>
+          <dl class="project-context"><div><dt>CONTEXT</dt><dd>Call Assist Ltd · Insurance &amp; recovery</dd></div><div><dt>MY WORK</dt><dd>End-to-end GenAI pipeline, API delivery and deployment</dd></div></dl>
+          <div class="tool-line">Python / Azure OpenAI / FastAPI / MLflow</div>
+          <details class="project-detail"><summary>Read the project notes <span aria-hidden="true">＋</span></summary><div class="detail-body"><h4>The problem</h4><p>Manual review meant working through call recordings to find the information needed for a case. The pipeline brings transcription, summarisation, intent and sentiment extraction into one workflow.</p><h4>What I built</h4><p>Speech-to-text feeds an LLM pipeline that extracts key case details and generates recovery options and recommended actions. FastAPI serves the outputs, and a Microsoft Copilot chatbot makes the insights available within agent workflows.</p><h4>Putting it into production</h4><p>Deployed on Azure, with MLflow for experiment tracking and model versioning, and GitHub Actions for testing and deployment.</p><p class="disclosure">Proprietary work. The diagram describes the workflow; it contains no customer recordings or internal system data.</p></div></details>
+        </div>
+        <div class="pipeline-panel" data-active-stage="0">
+          <div class="panel-heading"><span class="eyebrow">CALL INTELLIGENCE</span><span class="eyebrow">SYSTEM OVERVIEW</span></div>
+          <div class="pipeline-visual" aria-hidden="true">
+            <div class="wave-node"><div class="waveform"></div><span>CALL RECORDING</span><span class="node-count">01</span></div>
+            <div class="flow-line"></div>
+            <div class="processing-node"><span class="process-icon">∷</span><span>TRANSCRIBE<br> <strong>Interpret &amp; extract</strong></span><span class="node-count">02</span></div>
+            <div class="flow-line red"></div>
+            <div class="output-node"><span>AGENT WORKFLOW</span><div>Case summary <span>↗</span></div><div>Intent &amp; sentiment <span>↗</span></div><div>Recommended actions <span>↗</span></div><span class="node-count">03</span></div>
+          </div>
+          <div class="stage-selector" aria-label="Explore the pipeline"><button type="button" data-stage="0" aria-pressed="true">01 Transcribe</button><button type="button" data-stage="1" aria-pressed="false">02 Interpret</button><button type="button" data-stage="2" aria-pressed="false">03 Deliver</button></div>
+          <p class="stage-description" aria-live="polite">Speech-to-text turns call recordings into text for the next stage of analysis.</p>
+          <p class="schematic-label">Illustrative architecture · Based on deployed work</p>
+        </div>
+      </article>
+
+      <div class="project-pair">
+        <article id="molecular-activity" class="folio-project molecule-project">
+          <div class="project-meta"><span>02 — LIFE SCIENCES × ML</span><span>RESEARCH</span></div>
+          <div class="project-illustration molecule-illustration" role="img" aria-label="Conceptual diagram showing molecular structure converted to descriptors and an activity classifier">
+            <svg viewBox="0 0 520 250" aria-hidden="true"><g stroke="#4c6058" stroke-width="1.4" fill="none"><path d="M65 83l37-21 37 21v43l-37 22-37-22Zm74 0 37-21 37 21v43l-37 22-37-22M73 88v33m29 18 28-17m-28-51 28 16M176 71l28 16m0 6v28m-57 10 29 16M65 83 43 70m59 78v28m111-93 25-14M213 126l22 13"/><path stroke-dasharray="3 5" d="M259 109h43m-7-4 7 4-7 4M410 109h42m-7-4 7 4-7 4"/></g><g fill="#bd3d27" font-family="monospace" font-size="15"><text x="27" y="72">N</text><text x="94" y="196">OH</text><text x="240" y="69">O</text><text x="239" y="147">N</text></g><g fill="#638170"><rect x="323" y="75" width="8" height="8"/><rect x="341" y="75" width="8" height="8" opacity=".4"/><rect x="359" y="75" width="8" height="8"/><rect x="377" y="75" width="8" height="8" opacity=".3"/><rect x="323" y="93" width="8" height="8" opacity=".3"/><rect x="341" y="93" width="8" height="8"/><rect x="359" y="93" width="8" height="8" opacity=".5"/><rect x="377" y="93" width="8" height="8"/><rect x="323" y="111" width="8" height="8"/><rect x="341" y="111" width="8" height="8" opacity=".2"/><rect x="359" y="111" width="8" height="8"/><rect x="377" y="111" width="8" height="8" opacity=".5"/><rect x="323" y="129" width="8" height="8" opacity=".4"/><rect x="341" y="129" width="8" height="8"/><rect x="359" y="129" width="8" height="8" opacity=".3"/><rect x="377" y="129" width="8" height="8"/></g><circle cx="473" cy="109" r="15" fill="none" stroke="#bd3d27" stroke-width="1.5"/><circle cx="473" cy="109" r="4" fill="#bd3d27"/><g font-family="monospace" font-size="9.5" fill="#626b61"><text x="67" y="229">STRUCTURE</text><text x="317" y="180">DESCRIPTORS</text><text x="444" y="180">CLASSIFY</text></g></svg>
+            <span class="illustration-caption">MOLECULAR ACTIVITY / CONCEPTUAL WORKFLOW</span>
+          </div>
+          <h2>Finding signals in<br> molecular structure.</h2>
+          <p>Predicting anticancer activity from molecular descriptors and fingerprints, connecting my pharmacy background with machine learning.</p>
+          <div class="tool-line">RDKit / scikit-learn / Ensemble methods</div>
+          <details class="project-detail"><summary>Explore the approach <span aria-hidden="true">＋</span></summary><div class="detail-body"><p>RDKit generates molecular descriptors and fingerprints. Feature selection prepares the inputs for ensemble classifiers, assessed with cross-validation on unseen molecules.</p><p>This MSc / life-sciences project explores how structure-based models can help prioritise candidates for further investigation.</p><p class="disclosure">Research project. The visual is a schematic, not a molecular result or a validated clinical claim.</p></div></details>
+        </article>
+        <article id="clinical-nlp" class="folio-project clinical-project">
+          <div class="project-meta"><span>03 — CLINICAL NLP</span><span>CODE ON GITHUB</span></div>
+          <div class="project-illustration clinical-illustration">
+            <span class="illustration-index">TEXT → FEATURES → CLASSIFICATION</span>
+            <div class="text-fragment" aria-hidden="true"><span>Clinical text</span><i></i><i class="short"></i><div><b>language</b><i></i></div><i></i><div><i class="short"></i><b>patterns</b></div></div>
+            <div class="classification-mark"><span aria-hidden="true">↳</span> Structured signal</div>
+            <span class="illustration-caption">CONCEPTUAL VIEW / NO PATIENT DATA</span>
+          </div>
+          <h2>Making clinical text<br> machine-readable.</h2>
+          <p>An NLP pipeline that classifies gout-related clinical text, turning unstructured notes into information a model can work with.</p>
+          <div class="tool-line">Python / TF-IDF / scikit-learn</div>
+          <a class="project-repo" href="https://github.com/mohdumarharis/nlp_goutprediction" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+          <details class="project-detail"><summary>Read the method <span aria-hidden="true">＋</span></summary><div class="detail-body"><p>Text preprocessing and TF-IDF vectorisation feed a supervised classifier. Hyperparameter search tunes the model; precision, recall and F1 are used to assess classification performance.</p><p class="disclosure">A clinical-text classification project, not a diagnostic tool. No patient records are shown here.</p></div></details>
+        </article>
+      </div>
+
+      <article id="demand-forecasting" class="forecast-project">
+        <div><p class="eyebrow">04 — FORECASTING &amp; OPERATIONS</p><h2>Planning ahead<br> of demand.</h2></div>
+        <div class="forecast-content"><p>Time-series forecasting on pharmaceutical e-commerce data to support inventory planning and reduce stockouts. Clean SQL data in; planning insights through Power BI out.</p><div class="tool-line">Python / Time series / SQL / Power BI</div><details class="project-detail"><summary>Read the project notes <span aria-hidden="true">＋</span></summary><div class="detail-body"><p>Transactional and inventory data is cleaned in SQL, then used to build demand forecasts by product category. Results are surfaced in Power BI to make planning easier for operational teams.</p><p>Applied at Inletware, alongside dashboards for sales, inventory and fulfilment.</p></div></details></div>
+        <div class="forecast-flow" aria-label="Forecasting workflow"><span>PAST DEMAND</span><span class="forecast-spark" aria-hidden="true">▁▃▂▅▃▆▄▇▅</span><span class="forecast-arrow" aria-hidden="true">↓</span><span>BETTER PLANNING</span></div>
+      </article>
+    </section>
+</main>
+<aside class="page-endcap wrap" aria-label="Get in touch"><div><p class="eyebrow">LET’S TALK</p><p>Have a problem <em>worth solving?</em></p></div><a class="button-primary" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a></aside><div class="site-footer wrap"><footer><p>© 2026 Mohammad Umar Haris</p><div><a href="https://github.com/mohdumarharis" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/mohdomarharis" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="assets/umar-haris-cv.pdf" download>CV ↓</a><a href="#site-top">Back to top ↑</a></div><span class="footer-signature" aria-hidden="true">uh.</span></footer></div>
+</body>
+</html>
