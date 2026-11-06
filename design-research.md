@@ -4,7 +4,7 @@ Prepared 6 October 2026. Source: [umarharis.com](https://www.umarharis.com/). Au
 
 ## What the existing site communicates
 
-The strongest story is practical applied AI: a production call-analytics pipeline at Call Assist, supported by forecasting, deployment and data engineering experience. The pharmacy degree and MSc with Distinction form a useful connection to clinical NLP and molecular activity prediction.
+The strongest story is practical applied AI: a production call-analytics pipeline, supported by forecasting, deployment and data engineering experience. The pharmacy degree and MSc with Distinction form a useful connection to clinical NLP and molecular activity prediction.
 
 The existing site includes four jobs, four projects, six technology categories, two degrees, a downloadable CV and contact links. I retrieved its HTML, examined it in a browser and preserved the original CV. Its contact form uses EmailJS; I did not submit it.
 
@@ -15,7 +15,7 @@ The existing site includes four jobs, four projects, six technology categories, 
 - **The visual identity was familiar.** Dark gradients, glowing accents, a terminal-style introduction and repeated text-heavy blocks made the page resemble many technical portfolios. The redesign uses publication-style typography and project-specific diagrams.
 - **Experience totals conflicted.** The hero said “4+ years”; the biography said “5–6 years.” The new design uses actual career dates rather than choosing a total without confirmation.
 - **Contact was primarily framed around employment.** The dedicated Contact page welcomes both role and project conversations through the restored contact form.
-- **Metrics needed context.** The 22% improvement and 35% reporting-time reduction stay attached to Call Assist experience. They are not presented as measured results of the call-analysis pipeline.
+- **Metrics needed context.** The 22% improvement and 35% reporting-time reduction stay attached to the experience. They are not presented as measured results of the call-analysis pipeline.
 
 ## Articles worth reading
 
